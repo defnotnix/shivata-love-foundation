@@ -39,8 +39,8 @@ export function PageHome() {
     <>
       <motion.section
         variants={variantGeneral}
-        initial="initial"
-        whileInView="visible"
+         initial="initial"
+        animate="visible"
         viewport={{ once: true }}
       >
         <Container size="xl">

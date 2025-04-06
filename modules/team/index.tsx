@@ -43,7 +43,7 @@ export function PageTeam() {
       <motion.section
         variants={variantGeneral}
         initial="initial"
-        whileInView="visible"
+        animate="visible"
         viewport={{ once: true }}
       >
         <Paper

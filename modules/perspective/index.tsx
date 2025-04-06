@@ -26,7 +26,7 @@ export function PagePerspective() {
       <motion.section
         variants={variantGeneral}
         initial="initial"
-        whileInView="visible"
+        animate="visible"
         viewport={{ once: true }}
       >
         <Container size="xl" py={{ base: 100, lg: 160 }}>

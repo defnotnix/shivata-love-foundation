@@ -20,8 +20,8 @@ export function PageCampaign() {
     <>
       <motion.section
         variants={variantGeneral}
-        initial="initial"
-        whileInView="visible"
+         initial="initial"
+        animate="visible"
         viewport={{ once: true }}
       >
         <Paper
