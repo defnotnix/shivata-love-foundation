@@ -20,7 +20,7 @@ export function PageCampaign() {
     <>
       <motion.section
         variants={variantGeneral}
-         initial="initial"
+        initial="initial"
         animate="visible"
         viewport={{ once: true }}
       >
@@ -52,7 +52,7 @@ export function PageCampaign() {
       <motion.section
         variants={variantGeneral}
         initial="initial"
-        whileInView="visible"
+        animate="visible"
         viewport={{ once: true }}
       >
         <Container size="xl" py={100}>

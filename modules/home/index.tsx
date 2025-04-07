@@ -39,19 +39,21 @@ export function PageHome() {
     <>
       <motion.section
         variants={variantGeneral}
-         initial="initial"
+        initial="initial"
         animate="visible"
         viewport={{ once: true }}
       >
         <Container size="xl">
           <Box
             pt="xl"
+            px="md"
             h="50vh"
             pos="relative"
             style={{
               display: "flex",
               flexDirection: "column",
               justifyContent: "center",
+              overflow: "hidden",
             }}
           >
             <Text size="6rem" fw={600} visibleFrom="lg">
@@ -82,14 +84,29 @@ export function PageHome() {
           </Box>
 
           <Image
+            visibleFrom="lg"
             src={imgMarker.src}
             pos="absolute"
             h={300}
             w={300}
             fit="contain"
             style={{
-              top: "10%",
+              top: "16%",
               left: "45%",
+              zIndex: -1,
+            }}
+          />
+
+          <Image
+            hiddenFrom="lg"
+            src={imgMarker.src}
+            pos="absolute"
+            h={200}
+            w={200}
+            fit="contain"
+            style={{
+              top: "10%",
+              left: "10%",
               zIndex: -1,
             }}
           />
@@ -103,7 +120,7 @@ export function PageHome() {
             <Paper
               h="50vh"
               bg="brand.3"
-              p={{ base: "3rem", lg: "5rem" }}
+              p={{ base: "xl", lg: "5rem" }}
               style={{
                 display: "flex",
                 flexDirection: "column",

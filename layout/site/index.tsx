@@ -266,9 +266,15 @@ export function LayoutSite({ children }: PropsWithChildren) {
                       <Text size="md" c="dark.0" opacity={0.5}>
                         Email
                       </Text>
-                      <Text size="md" c="dark.0">
+                      <Text size="md" c="dark.0" visibleFrom="lg">
                         info@shivata-love.org
                         <br /> shivatalovefoundation16@gmail.com{" "}
+                      </Text>
+                      <Text size="md" c="dark.0" hiddenFrom="lg">
+                        info@shivata-love.org
+                        <br /> shivatalovefoundation16
+                        <br />
+                        @gmail.com{" "}
                       </Text>
                     </div>
                   </SimpleGrid>

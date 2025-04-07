@@ -12,6 +12,7 @@ import {
   Image,
   Paper,
   SimpleGrid,
+  Space,
   Stack,
   Text,
 } from "@mantine/core";
@@ -28,6 +29,7 @@ import { categories, prevention, symptoms } from "./data";
 
 import { motion } from "framer-motion";
 import { variantGeneral } from "@/animate/variantGeneral";
+import { artworks } from "@/assets/artworks";
 
 export function PageAbout() {
   return (
@@ -37,6 +39,10 @@ export function PageAbout() {
         initial="initial"
         animate="visible"
         viewport={{ once: true }}
+        style={{
+          width: "100vw",
+          overflowX: "hidden",
+        }}
       >
         <Paper
           radius={0}
@@ -73,7 +79,7 @@ export function PageAbout() {
       <motion.section
         variants={variantGeneral}
         initial="initial"
-        whileInView="visible"
+        animate="visible"
         viewport={{ once: true }}
       >
         <Container size="xl" py={100}>
@@ -310,6 +316,49 @@ export function PageAbout() {
                 </Text>
               </Grid.Col>
             </Grid>
+
+            <Space h={100} />
+
+            <Text size="md" c="brand.6" fw={600}>
+              Artworks
+            </Text>
+            <Text size="3rem" fw={600} mt="sm" visibleFrom="lg">
+              Some artworks
+              <br /> of Shivata Upadhayaya Grela{" "}
+            </Text>
+
+            <SimpleGrid cols={{ base: 1, lg: 3 }} mt="xl" spacing="xs">
+              <Stack gap="xs" pt={{ base: 0, lg: 50 }}>
+                {artworks.slice(0, 2).map((artwork: any, index: number) => (
+                  <Stack key={index} gap="xs">
+                    <Image src={artwork.image.src} />
+                    <Text size="sm" fw={600} opacity={0.5}>
+                      {artwork.label}
+                    </Text>
+                  </Stack>
+                ))}
+              </Stack>
+              <Stack gap="xs">
+                {artworks.slice(2, 4).map((artwork: any, index: number) => (
+                  <Stack key={index} gap="xs">
+                    <Image src={artwork.image.src} />
+                    <Text size="sm" fw={600} opacity={0.5}>
+                      {artwork.label}
+                    </Text>
+                  </Stack>
+                ))}
+              </Stack>
+              <Stack gap="xs" pt={{ base: 0, lg: 32 }}>
+                {artworks.slice(5, 7).map((artwork: any, index: number) => (
+                  <Stack key={index} gap="xs">
+                    <Image src={artwork.image.src} />
+                    <Text size="sm" fw={600} opacity={0.5}>
+                      {artwork.label}
+                    </Text>
+                  </Stack>
+                ))}
+              </Stack>
+            </SimpleGrid>
           </Container>
         </Paper>
       </motion.section>

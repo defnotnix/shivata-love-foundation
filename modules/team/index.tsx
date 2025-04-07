@@ -1,6 +1,7 @@
 "use client";
 
 import { variantGeneral } from "@/animate/variantGeneral";
+import { team } from "@/assets/team";
 import {
   Box,
   Container,
@@ -13,26 +14,76 @@ import {
 
 import { motion } from "framer-motion";
 
+const teamtop = [
+  {
+    name: "Ragini Upadhayay",
+    position: "President, Founder",
+    image: team.imgRagini.src,
+  },
+  {
+    name: "Shivata Upadhyay Grela",
+    position: "Founder",
+    image: team.imgShivata.src,
+  },
+];
+
+const teams = [
+  {
+    name: "Mr. Ram Pujan Thakur",
+    position: "Secretary",
+    career: "Assembly Member, Nepal Academy of Fine Art",
+    image: team.imgRampujan.src,
+  },
+  {
+    name: "Rajan Pandey",
+    position: "Board Member",
+
+    image: team.imgRajan.src,
+  },
+  {
+    name: "Nitika Dhungana",
+    position: "Board Member",
+    image: team.imgNikita.src,
+  },
+  {
+    name: "Erina Tamrakar",
+    position: "Board Member",
+    career: "Visual Artist/ Co-Founder at E-Art Nepal",
+    image: team.imgErina.src,
+  },
+  {
+    name: "Atul Koirala",
+    position: "Board Member",
+    career: "General Secretary of Sushil Koirala Memorial Foundation",
+    image: team.imgAtul.src,
+  },
+  {
+    name: "Ankur Dhungana",
+    position: "Treasurer",
+    career:
+      "Managing Director at Solution of Nepal Engineering Consultancy Pvt.Ltd",
+    image: team.imgAnkur.src,
+  },
+];
+
 export function PageTeam() {
-  const TeamCard = ({ teaminfo }: any) => {
+  const TeamCard = ({ details }: any) => {
     return (
       <Box>
         <Image
           mb="md"
           radius="md"
           h={{ base: 200, lg: 400 }}
-          src={
-            "https://images.unsplash.com/photo-1664574654700-75f1c1fad74e?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-          }
+          src={details?.image || "https://via.placeholder.com/150"}
         />
         <Text size="sm" fw={600}>
-          Ragini Upadhayay
+          {details?.name}
         </Text>
         <Text size="md" fw={600} c="brand.6">
-          President
+          {details?.position}
         </Text>
         <Text size="xs" fw={600} opacity={0.5}>
-          Visual Artist, Former Chancellor of Nepal Academy of Fine Arts.
+          {details?.career || "Board Member, Shivata Love Foundation"}
         </Text>
       </Box>
     );
@@ -77,7 +128,7 @@ export function PageTeam() {
       <motion.section
         variants={variantGeneral}
         initial="initial"
-        whileInView="visible"
+        animate="visible"
         viewport={{ once: true }}
       >
         <Container size="xl" py={100}>
@@ -90,17 +141,15 @@ export function PageTeam() {
 
           <SimpleGrid cols={{ base: 2, lg: 4 }} py="xl">
             <Box visibleFrom="lg" />
-            <TeamCard />
-            <TeamCard />
+
+            {teamtop.map((teaminfo: any, index: number) => (
+              <TeamCard key={index} details={teaminfo} />
+            ))}
             <Box visibleFrom="lg" />
-            <TeamCard />
-            <TeamCard />
-            <TeamCard />
-            <TeamCard />
-            <TeamCard />
-            <TeamCard />
-            <TeamCard />
-            <TeamCard />
+
+            {teams.map((teaminfo: any, index: number) => (
+              <TeamCard key={index} details={teaminfo} />
+            ))}
           </SimpleGrid>
         </Container>
       </motion.section>
