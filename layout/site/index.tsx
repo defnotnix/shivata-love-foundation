@@ -169,6 +169,28 @@ export function LayoutSite({ children }: PropsWithChildren) {
                 >
                   Campaigns
                 </Button>
+                <Button
+                  size="sm"
+                  variant="subtle"
+                  c={
+                    Pathname == "/campaigns"
+                      ? scroll.y < 500
+                        ? redBgPages.includes(Pathname)
+                          ? "gray.0"
+                          : "dark"
+                        : ""
+                      : scroll.y < 500
+                      ? redBgPages.includes(Pathname)
+                        ? "rgba(255,255,255,.5)"
+                        : "dark"
+                      : "dark"
+                  }
+                  onClick={() => {
+                    Router.push("/beneficiaries");
+                  }}
+                >
+                  Beneficiaries
+                </Button>
               </Group>
             </Grid.Col>
             <Grid.Col span={{ base: 12, lg: 3 }}>
