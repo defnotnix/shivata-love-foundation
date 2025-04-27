@@ -630,16 +630,16 @@ export default function PageHome() {
                 <Avatar />
                 <div>
                   <Text size="md" fw={600}>
-                    Rachel S.
+                    Aasha T.
                   </Text>
                   <Text size="sm" c="brand.7">
-                    Director, CG Group
+                    Student, Kathmandu
                   </Text>
                 </div>
                 <Text size="sm" opacity={0.7}>
-                  Quis vel eros donec ac odio tempor. Leo vel orci porta non
-                  pulvinar neque laoreet suspendisse interdum. Amet commodo
-                  nulla facilisi nullam vehicula ipsum a arcu cursus.
+                  Thanks to the Shivata Love Foundation, I was able to continue
+                  my studies after my family's financial struggles. Their
+                  support gave me a new hope and belief in myself.
                 </Text>
               </Stack>
             </Paper>
@@ -658,16 +658,16 @@ export default function PageHome() {
                 <Avatar />
                 <div>
                   <Text size="md" fw={600}>
-                    Rachel S.
+                    Binita K.
                   </Text>
                   <Text size="sm" c="brand.7">
-                    Director, CG Group
+                    Young Entrepreneur, Pokhara
                   </Text>
                 </div>
                 <Text size="sm" opacity={0.7}>
-                  Quis vel eros donec ac odio tempor. Leo vel orci porta non
-                  pulvinar neque laoreet suspendisse interdum. Amet commodo
-                  nulla facilisi nullam vehicula ipsum a arcu cursus.
+                  I attended one of their social impact workshops and it changed
+                  my perspective. Today, I run my own small business and mentor
+                  other young girls in my village!
                 </Text>
               </Stack>
             </Paper>
@@ -686,16 +686,16 @@ export default function PageHome() {
                 <Avatar />
                 <div>
                   <Text size="md" fw={600}>
-                    Rachel S.
+                    Suman P.
                   </Text>
                   <Text size="sm" c="brand.7">
-                    Director, CG Group
+                    Social Worker, Bharatpur
                   </Text>
                 </div>
                 <Text size="sm" opacity={0.7}>
-                  Quis vel eros donec ac odio tempor. Leo vel orci porta non
-                  pulvinar neque laoreet suspendisse interdum. Amet commodo
-                  nulla facilisi nullam vehicula ipsum a arcu cursus.
+                  Shivata Love Foundation is truly about compassion in action.
+                  Through their financial support programs, we were able to
+                  organize free health camps for underprivileged families.
                 </Text>
               </Stack>
             </Paper>

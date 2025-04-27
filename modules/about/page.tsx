@@ -333,14 +333,14 @@ export default function PageAbout() {
                 <Carousel.Slide key={index}>
                   <Image src={artwork.image.src} />
 
-                  <div>
+                  {/* <div>
                     <Text size="sm" fw={600} opacity={0.5}>
                       {artwork.label}
                     </Text>
                     <Text size="sm" fw={600} opacity={0.5}>
                       Size | Paper | Date
                     </Text>
-                  </div>
+                  </div> */}
                 </Carousel.Slide>
               ))}
             </Carousel>
