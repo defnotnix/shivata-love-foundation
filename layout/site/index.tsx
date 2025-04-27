@@ -468,8 +468,7 @@ export function LayoutSite({ children }: PropsWithChildren) {
               </Text>
 
               <Text size="2rem" c="dark.0">
-                Building a better society as envisioned by Shivata Upadhyay
-                Grela.
+                Love is our key to prevent humanity's collapse
               </Text>
 
               <Text size="sm" c="dark.0">

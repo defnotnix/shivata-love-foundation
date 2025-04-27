@@ -62,12 +62,13 @@ export default function PageDonate() {
                   We will provide you a “Certificate of Donation” for every
                   successful donation.
                 </Text>
-                <Text size="sm">
-                  Shivata love foundation Nepal needs your help to get a kick
-                  start with its activities donation are welcome and necessary
-                  for activities to make place, therefore you can help by making
-                  a donation to the bank account listed below any amount can
-                  make a difference.{" "}
+                <Text size="md">
+                  Your donation to Shivata Love Foundation Nepal multiplies into
+                  women's empowerment programs, children's education
+                  initiatives, cultural preservation projects, and vital
+                  healthcare services. Each contribution helps us create a
+                  brighter, more equitable future across Nepal's communities.
+                  Join us in making meaningful change possible.
                 </Text>
               </SimpleGrid>
             </div>
@@ -122,7 +123,7 @@ export default function PageDonate() {
               </div>
 
               <Group justify="flex-end">
-                <Paper withBorder>
+                <Paper withBorder mt={{ base: 0, lg: -100 }}>
                   <Image w={300} src={imgFoneQR.src} />
                 </Paper>
               </Group>
