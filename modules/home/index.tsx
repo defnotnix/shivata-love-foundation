@@ -27,7 +27,7 @@ import imgMarker from "@/assets/image/circleMarker.png";
 import imgTeam from "@/assets/image/org_team.jpg";
 import imgMithilaArt from "@/assets/campaigns/mithilaart.jpg";
 import imgMithilaArt2 from "@/assets/campaigns/mithilaart_2.jpg";
-import imgScholarshipChina from "@/assets/campaigns/scholarshipchina.jpg";
+import imgScholarshipChina from "@/assets/campaigns/scholarshipChina.jpg";
 import imgArtsupplies from "@/assets/campaigns/artsuppliesschool.jpg";
 import { variantGeneral } from "@/animate/variantGeneral";
 import imgSchool from "@/assets/image/school.jpg";
