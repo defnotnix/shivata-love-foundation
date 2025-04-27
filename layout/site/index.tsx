@@ -15,6 +15,7 @@ import {
   Text,
 } from "@mantine/core";
 import { useDisclosure, useWindowScroll } from "@mantine/hooks";
+import { Quotes } from "@phosphor-icons/react";
 import { usePathname, useRouter } from "next/navigation";
 import { PropsWithChildren } from "react";
 
@@ -458,26 +459,51 @@ export function LayoutSite({ children }: PropsWithChildren) {
           background: "linear-gradient(90deg,#150808,#291010)",
         }}
       >
-        <Container size="xl" pb={100} pt={{ base: 200, lg: 200 }}>
-          <SimpleGrid cols={{ base: 1, lg: 2 }}>
-            <Stack>
-              <Text size="sm" c="dark.0">
-                SHIVATA LOVE
-                <br />
-                FOUNDATION
-              </Text>
+        <Container
+          size="xl"
+          pb={100}
+          pt={{ base: 200, lg: 200 }}
+          pos="relative"
+        >
+          <Group wrap="nowrap" gap="xl" justify="center">
+            <Quotes
+              size={24}
+              color="var(--mantine-color-brand-3)"
+              weight="fill"
+              style={{
+                marginTop: -10,
+                transform: "rotate(180deg)",
+              }}
+            />
 
-              <Text size="2rem" c="dark.0">
-                Love is our key to prevent humanity's collapse
-              </Text>
+            <Text
+              ta="center"
+              size="3rem"
+              c="dark.0"
+              style={{
+                fontFamily: "Oooh Baby",
+              }}
+              fw={700}
+            >
+              {" "}
+              <span> Love is our Key to</span>, prevent Humanity's collapse
+            </Text>
+            <Quotes
+              size={24}
+              color="var(--mantine-color-brand-3)"
+              weight="fill"
+              style={{
+                marginTop: -10,
+              }}
+            />
+          </Group>
+          <Text size="md" opacity={0.6} c="white" ta="center" mt="md">
+            Shivata Upadhyay Grela
+          </Text>
 
-              <Text size="sm" c="dark.0">
-                Shivata Love Foundation Office
-              </Text>
-            </Stack>
-          </SimpleGrid>
+          <Divider mt="6rem" opacity={0.1} />
 
-          <Space h="4rem" />
+          <Space h="6rem" />
 
           <Grid>
             <Grid.Col span={{ base: 12, lg: 6 }}>
