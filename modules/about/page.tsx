@@ -93,11 +93,11 @@ export default function PageAbout() {
               </Text>
               <Text size="3rem" fw={600} mt="sm" visibleFrom="lg">
                 Committed to Transforming Lives and Building Sustainable,
-                Resilient Communities Worldwide.
+                Resilient Communities Nation-wide.
               </Text>
               <Text size="2rem" fw={600} mt="sm" hiddenFrom="lg">
                 Committed to Transforming Lives and Building Sustainable,
-                Resilient Communities Worldwide.
+                Resilient Communities Nation-wide.
               </Text>
               <Grid>
                 <Grid.Col
@@ -203,10 +203,12 @@ export default function PageAbout() {
             </Grid.Col>
 
             <Grid.Col span={{ base: 12, lg: 4 }} offset={{ base: 0, lg: 1 }}>
-              {/* <Image
-                radius="lg"
-                src="https://images.unsplash.com/photo-1684262483735-1101bcb10f0d?q=80&w=1935&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-              /> */}
+              <Text ta="right" size="5rem" c="brand.6" fw={600}>
+                आफ्नो सपनामा
+              </Text>
+              <Text ta="right" size="2.5rem" opacity={0.5} mt="md">
+                In my dreams.
+              </Text>
             </Grid.Col>
           </Grid>
         </Container>
@@ -237,7 +239,7 @@ export default function PageAbout() {
                 <Image mb="xl" h={600} radius="lg" src={imgShivata.src} />
 
                 <Text size="2rem" fw={600}>
-                  Shivata Upadhyay Grela
+                  Shivata Upadhyaya Grela
                 </Text>
                 <Text size="xl" fw={600}>
                   1995-2016
@@ -256,8 +258,8 @@ export default function PageAbout() {
                   THE STORY
                 </Text>
                 <Text size="sm" mt="sm">
-                  Shivata Upadhayay Grela was born on April 27, 1995, and grew
-                  up with a deep love for Nepal, carrying her identity with
+                  Shivata Upadhayay Grela was born on <b>April 22, 1995</b>, and
+                  grew up with a deep love for Nepal, carrying her identity with
                   immense pride. She studied at The British School and later
                   pursued higher education, shaping herself into a compassionate
                   and artistic individual. Her passion for social work was

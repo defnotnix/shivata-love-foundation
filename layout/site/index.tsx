@@ -1,6 +1,7 @@
 "use client";
 
 import {
+  Anchor,
   Box,
   Burger,
   Button,
@@ -498,7 +499,7 @@ export function LayoutSite({ children }: PropsWithChildren) {
             />
           </Group>
           <Text size="md" opacity={0.6} c="white" ta="center" mt="md">
-            Shivata Upadhyay Grela
+            Shivata Upadhyaya Grela
           </Text>
 
           <Divider mt="6rem" opacity={0.1} />
@@ -515,7 +516,7 @@ export function LayoutSite({ children }: PropsWithChildren) {
                         Building
                       </Text>
                       <Text size="md" c="dark.0" opacity={1}>
-                        Shivata Love Foundation Branhc Office <br />
+                        Shivata Love Foundation Branch Office <br />
                         Building
                         <br />
                         <br />
@@ -564,62 +565,100 @@ export function LayoutSite({ children }: PropsWithChildren) {
               <SimpleGrid cols={{ base: 2, lg: 3 }}>
                 <div>
                   <Text size="xs" c="dark.0" opacity={0.5}>
-                    PROGRAMS
+                    About
                   </Text>
 
                   <Stack gap={"xs"} mt="sm">
-                    <Text size="sm" c="dark.0">
-                      Scholarships
-                    </Text>
-                    <Text size="sm" c="dark.0">
-                      Donations
-                    </Text>
-                    <Text size="sm" c="dark.0">
-                      Relief Programs
-                    </Text>
-                    <Text size="sm" c="dark.0">
-                      Support
-                    </Text>
+                    <Anchor
+                      size="sm"
+                      c="dark.0"
+                      onClick={() => {
+                        Router.push("/");
+                      }}
+                    >
+                      Home
+                    </Anchor>
+                    <Anchor
+                      size="sm"
+                      c="dark.0"
+                      onClick={() => {
+                        Router.push("/about");
+                      }}
+                    >
+                      About
+                    </Anchor>
+                    <Anchor
+                      size="sm"
+                      c="dark.0"
+                      onClick={() => {
+                        Router.push("/team");
+                      }}
+                    >
+                      Team
+                    </Anchor>
                   </Stack>
                 </div>
                 <div>
                   <Text size="xs" c="dark.0" opacity={0.5}>
-                    PROGRAMS
+                    Vision & Works
                   </Text>
 
                   <Stack gap={"xs"} mt="sm">
-                    <Text size="sm" c="dark.0">
-                      Scholarships
-                    </Text>
-                    <Text size="sm" c="dark.0">
-                      Donations
-                    </Text>
-                    <Text size="sm" c="dark.0">
-                      Relief Programs
-                    </Text>
-                    <Text size="sm" c="dark.0">
-                      Support
-                    </Text>
+                    <Anchor
+                      size="sm"
+                      c="dark.0"
+                      onClick={() => {
+                        Router.push("/campaigns");
+                      }}
+                    >
+                      Camapigns
+                    </Anchor>
+                    <Anchor
+                      size="sm"
+                      c="dark.0"
+                      onClick={() => {
+                        Router.push("/perspective");
+                      }}
+                    >
+                      Perspective
+                    </Anchor>
+                    <Anchor
+                      size="sm"
+                      c="dark.0"
+                      onClick={() => {
+                        Router.push("/beneficiaries");
+                      }}
+                    >
+                      Beneficiaries
+                    </Anchor>
                   </Stack>
                 </div>
                 <div>
                   <Text size="xs" c="dark.0" opacity={0.5}>
-                    PROGRAMS
+                    Socials
                   </Text>
 
                   <Stack gap={"xs"} mt="sm">
-                    <Text size="sm" c="dark.0">
-                      Scholarships
-                    </Text>
-                    <Text size="sm" c="dark.0">
-                      Donations
-                    </Text>
-                    <Text size="sm" c="dark.0">
-                      Relief Programs
-                    </Text>
-                    <Text size="sm" c="dark.0">
-                      Support
-                    </Text>
+                    <Anchor
+                      size="sm"
+                      c="dark.0"
+                      onClick={() => {
+                        Router.push("https://www.facebook.com/shivata.love/");
+                      }}
+                    >
+                      Facebook
+                    </Anchor>
+                    <Anchor
+                      size="sm"
+                      c="dark.0"
+                      onClick={() => {
+                        Router.push(
+                          "https://www.instagram.com/shivatalovefoundation16"
+                        );
+                      }}
+                    >
+                      Instagram
+                    </Anchor>
                   </Stack>
                 </div>
               </SimpleGrid>

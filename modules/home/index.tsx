@@ -350,7 +350,7 @@ export default function PageHome() {
                   }}
                 >
                   <Text size="3rem" fw={600}>
-                    20+
+                    3.5K +
                   </Text>
                   <Text size="sm">Lives Impacted</Text>
                 </div>
@@ -362,7 +362,7 @@ export default function PageHome() {
                   }}
                 >
                   <Text size="3rem" fw={600}>
-                    20+
+                    2.8K +
                   </Text>
                   <Text size="sm">Womens Helped</Text>
                 </div>
@@ -374,7 +374,7 @@ export default function PageHome() {
                   }}
                 >
                   <Text size="3rem" fw={600}>
-                    20+
+                    12 +
                   </Text>
                   <Text size="sm">Communities Helped</Text>
                 </div>
@@ -477,7 +477,7 @@ export default function PageHome() {
                   Love is our key to prevent humanity’s collapse.
                 </Text>
                 <Text size="xs" opacity={0.5}>
-                  Shivata Upadhyay Grela
+                  Shivata Upadhyaya Grela
                 </Text>
               </Stack>
             </Grid.Col>

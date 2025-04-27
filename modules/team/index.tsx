@@ -21,7 +21,7 @@ const teamtop = [
     image: team.imgRagini.src,
   },
   {
-    name: "Shivata Upadhyay Grela",
+    name: "Shivata Upadhyaya Grela",
     position: "Founder",
     image: team.imgShivata.src,
   },

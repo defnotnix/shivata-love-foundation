@@ -140,7 +140,7 @@ export const campaignArtAndCulture = [
     title:
       "Shivata-30: A Cultural Movement to Encourage and Uplift Young Nepali Artists",
     date: "2025",
-    location: "Ragini Art Center, Bhaktapur, Nepal",
+    location: "Nepal Art Council, Babar Mahal, Kathmandu, Nepal",
   },
   {
     image: imgAwadhiArtWomen.src,

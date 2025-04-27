@@ -137,14 +137,14 @@ export default function PagePerspective() {
               >
                 <Image
                   fit="contain"
-                  mt={-200}
+                  mt={-150}
                   h="calc(100% + 50px)"
                   src={imgPerspectiveWomen.src}
                 />
 
                 <Image
                   fit="contain"
-                  mt={-200}
+                  mt={-150}
                   h="calc(100% + 50px)"
                   src={imgLine.src}
                   style={{
@@ -152,13 +152,6 @@ export default function PagePerspective() {
                     top: 160,
                   }}
                 />
-
-                <Text size="xs" c="gray.0" ta="center" mt="xl">
-                  Radika Mahoto
-                </Text>
-                <Text size="xs" c="gray.0" ta="center" opacity={0.5}>
-                  Benificiary, Women Empowerment Project 2021
-                </Text>
               </Grid.Col>
             </Grid>
           </Container>
@@ -365,7 +358,7 @@ export default function PagePerspective() {
                 />
 
                 <Text size="xs" c="gray.0" ta="center" mt="xl">
-                  Ragini Upadhyay Mam
+                  Ragini Upadhyaya Mam
                 </Text>
                 <Text size="xs" c="gray.0" ta="center" opacity={0.5}>
                   Women Art Workshop with padam shree artist. 8th Augst 2024
