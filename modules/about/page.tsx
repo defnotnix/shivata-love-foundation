@@ -30,8 +30,10 @@ import { categories, prevention, symptoms } from "./data";
 import { motion } from "framer-motion";
 import { variantGeneral } from "@/animate/variantGeneral";
 import { artworks } from "@/assets/artworks";
+import { team } from "@/assets/team";
+import { Carousel } from "@mantine/carousel";
 
-export function PageAbout() {
+export default function PageAbout() {
   return (
     <>
       <motion.section
@@ -48,13 +50,13 @@ export function PageAbout() {
           radius={0}
           bg="linear-gradient(800deg, #E55454 0%, #7F2F2F 100%)"
         >
-          <Container size="xl" py={{ base: 100, lg: 160 }}>
+          <Container size="xl" pt={160} pb={{ base: 64, lg: 160 }}>
             <Text size="6rem" fw={600} c="gray.0" visibleFrom="lg">
               ABOUT
               <br />
               THE ORGANIZATION
             </Text>
-            <Text size="2rem" fw={600} c="gray.0" hiddenFrom="lg">
+            <Text size="3rem" fw={600} c="gray.0" hiddenFrom="lg">
               ABOUT
               <br />
               THE ORGANIZATION
@@ -167,50 +169,43 @@ export function PageAbout() {
               <Stack>
                 <Text size="sm">15+ Members</Text>
                 <Avatar.Group>
-                  <Avatar src="image.png" />
-                  <Avatar src="image.png" />
-                  <Avatar src="image.png" />
+                  <Avatar src={team.imgAnkur.src} />
+                  <Avatar src={team.imgAtul.src} />
+                  <Avatar src={team.imgErina.src} />
                   <Avatar>+5</Avatar>
                 </Avatar.Group>
               </Stack>
             </Grid.Col>
             <Grid.Col span={{ base: 12, lg: 5 }}>
               <Text size="3rem" fw={600} mt="sm" visibleFrom="lg">
-                Committed to Transforming Lives and Building Sustainable,
-                Resilient Communities Worldwide.
+                United by Art, Driven by Purpose: Creating Social Impact Through
+                Creative Expression
               </Text>
 
               <Text size="2rem" fw={600} mt="sm" hiddenFrom="lg">
-                Committed to Transforming Lives and Building Sustainable,
-                Resilient Communities Worldwide.
+                United by Art, Driven by Purpose: Creating Social Impact Through
+                Creative Expression
               </Text>
 
               <Text size="sm" mt="xl">
-                Shivata Love Foundation Nepal (SLFN) commemorates the life and
-                legacy of Shivata Upadhayay Grela, promoting unconditional love
-                and global thinking through its support for neglected women and
-                girls. Founded in Belgium and Nepal, SLFN raises awareness about
-                the meningitis B vaccine, which could have saved Shivata’s life,
-                and provides scholarships to underprivileged girls in Nepal and
-                small grants to those who have fallen out of the school system
-                in Belgium. The foundation has also contributed to disaster
-                relief efforts, including the rescue of flood victims.
-                <br />
-                <br />
-                Through partnerships with local organizations, SLFN works
-                collaboratively to maximize its impact, ensuring that support
-                reaches those in need. By fostering education, empowerment, and
-                resilience, the foundation helps women and girls build brighter
-                futures. Its commitment to compassionate action continues to
-                create lasting change, reinforcing the values Shivata stood for.{" "}
+                We are a collective of artists, creators, and cultural
+                contributors from across Nepal, united by a shared commitment to
+                social impact. Through the lens of art, we aim to amplify
+                voices, spark conversations, and inspire change. Our
+                collaboration with the Shivata Love Foundation Nepal is rooted
+                in the belief that creativity can be a powerful tool for
+                advocacy, healing, and empowerment. By blending artistic
+                expression with community engagement, we strive to honor
+                Shivata’s legacy and contribute to building a more
+                compassionate, inclusive, and resilient society.
               </Text>
             </Grid.Col>
 
             <Grid.Col span={{ base: 12, lg: 4 }} offset={{ base: 0, lg: 1 }}>
-              <Image
+              {/* <Image
                 radius="lg"
                 src="https://images.unsplash.com/photo-1684262483735-1101bcb10f0d?q=80&w=1935&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-              />
+              /> */}
             </Grid.Col>
           </Grid>
         </Container>
@@ -304,15 +299,14 @@ export function PageAbout() {
                 </Text>
                 <Text size="sm" mt="sm">
                   In 2016, Shivata tragically contracted meningitis B, a
-                  bacterial infection that proved fatal despite her being
-                  vaccinated. Her passing left a deep void in the lives of those
-                  who loved her, but her legacy endures through the Shivata Love
-                  Foundation Nepal (SLFN), which continues her mission of
-                  helping neglected women and girls. Her story is not just one
-                  of loss but of love, giving, and caring. Through her art,
-                  generosity, and vision, she left behind a lasting message:
-                  death is just a process of life & freedom, and love is the
-                  true legacy we leave behind.{" "}
+                  bacterial infection that proved fatal. Her passing left a deep
+                  void in the lives of those who loved her, but her legacy
+                  endures through the Shivata Love Foundation Nepal (SLFN),
+                  which continues her mission of helping neglected women and
+                  girls. Her story is not just one of loss but of love, giving,
+                  and caring. Through her art, generosity, and vision, she left
+                  behind a lasting message: death is just a process of life &
+                  freedom, and love is the true legacy we leave behind.{" "}
                 </Text>
               </Grid.Col>
             </Grid>
@@ -327,38 +321,29 @@ export function PageAbout() {
               <br /> of Shivata Upadhayaya Grela{" "}
             </Text>
 
-            <SimpleGrid cols={{ base: 1, lg: 3 }} mt="xl" spacing="xs">
-              <Stack gap="xs" pt={{ base: 0, lg: 50 }}>
-                {artworks.slice(0, 2).map((artwork: any, index: number) => (
-                  <Stack key={index} gap="xs">
-                    <Image src={artwork.image.src} />
+            <Carousel
+              slideSize="33.333333%"
+              slideGap="md"
+              loop
+              align="start"
+              slidesToScroll={3}
+              mt="xl"
+            >
+              {artworks.map((artwork: any, index: number) => (
+                <Carousel.Slide key={index}>
+                  <Image src={artwork.image.src} />
+
+                  <div>
                     <Text size="sm" fw={600} opacity={0.5}>
                       {artwork.label}
                     </Text>
-                  </Stack>
-                ))}
-              </Stack>
-              <Stack gap="xs">
-                {artworks.slice(2, 4).map((artwork: any, index: number) => (
-                  <Stack key={index} gap="xs">
-                    <Image src={artwork.image.src} />
                     <Text size="sm" fw={600} opacity={0.5}>
-                      {artwork.label}
+                      Size | Paper | Date
                     </Text>
-                  </Stack>
-                ))}
-              </Stack>
-              <Stack gap="xs" pt={{ base: 0, lg: 32 }}>
-                {artworks.slice(5, 7).map((artwork: any, index: number) => (
-                  <Stack key={index} gap="xs">
-                    <Image src={artwork.image.src} />
-                    <Text size="sm" fw={600} opacity={0.5}>
-                      {artwork.label}
-                    </Text>
-                  </Stack>
-                ))}
-              </Stack>
-            </SimpleGrid>
+                  </div>
+                </Carousel.Slide>
+              ))}
+            </Carousel>
           </Container>
         </Paper>
       </motion.section>
@@ -379,8 +364,9 @@ export function PageAbout() {
 
           <Grid gutter={0} mt="100">
             <Grid.Col span={{ base: 12, lg: 3 }}>
-              <Stack gap="xl">
+              <Stack gap="md">
                 <Paper
+                  visibleFrom="lg"
                   h={180}
                   bg="brand.2"
                   p="lg"
@@ -389,6 +375,54 @@ export function PageAbout() {
                     transform: "rotate(5deg)",
                   }}
                 >
+                  <Text size="md" ta="center" fw={600}>
+                    Reasons
+                  </Text>
+
+                  <SimpleGrid cols={3} mt="sm">
+                    <div>
+                      <Center>
+                        <Avatar
+                          src="https://static.vecteezy.com/system/resources/previews/040/323/541/non_2x/ai-generated-bacteria-isolated-on-transparent-background-free-png.png"
+                          bg="gray.0"
+                          size={64}
+                          mb="sm"
+                        />
+                      </Center>
+                      <Text size="sm" ta="center">
+                        Bacteria
+                      </Text>
+                    </div>
+                    <div>
+                      <Center>
+                        <Avatar
+                          src="https://www.vbivaccines.com/wp-content/uploads/2021/02/virus.png"
+                          bg="gray.0"
+                          size={64}
+                          mb="sm"
+                        />
+                      </Center>
+                      <Text size="sm" ta="center">
+                        Virus
+                      </Text>
+                    </div>
+                    <div>
+                      <Center>
+                        <Avatar
+                          src="https://png.pngtree.com/png-clipart/20190921/original/pngtree-bacterial-and-fungal-virus-illustration-png-image_4746415.jpg"
+                          bg="gray.0"
+                          size={64}
+                          mb="sm"
+                        />
+                      </Center>
+                      <Text size="sm" ta="center">
+                        Fungi
+                      </Text>
+                    </div>
+                  </SimpleGrid>
+                </Paper>
+
+                <Paper hiddenFrom="lg" h={180} bg="brand.2" p="lg" radius="lg">
                   <Text size="md" ta="center" fw={600}>
                     Reasons
                   </Text>
@@ -453,6 +487,7 @@ export function PageAbout() {
                   </AspectRatio>
                 </Paper>
                 <Paper
+                  visibleFrom="lg"
                   bg="brand.2"
                   p="lg"
                   radius="lg"
@@ -460,6 +495,21 @@ export function PageAbout() {
                     transform: "rotate(-5deg)",
                   }}
                 >
+                  <Grid py={32}>
+                    <Grid.Col span={3}>
+                      <Image src={imgPie.src} />
+                    </Grid.Col>
+                    <Grid.Col span={9}>
+                      <Text size="xl" lh="xs" fw={600}>
+                        50 % Deaths
+                        <br />
+                        without treatment.{" "}
+                      </Text>
+                    </Grid.Col>
+                  </Grid>
+                </Paper>
+
+                <Paper hiddenFrom="lg" bg="brand.2" p="lg" radius="lg">
                   <Grid py={32}>
                     <Grid.Col span={3}>
                       <Image src={imgPie.src} />

@@ -31,8 +31,9 @@ import imgScholarshipChina from "@/assets/campaigns/scholarshipchina.jpg";
 import imgArtsupplies from "@/assets/campaigns/artsuppliesschool.jpg";
 import { variantGeneral } from "@/animate/variantGeneral";
 import imgSchool from "@/assets/image/school.jpg";
+import { campaignEducation, campaignWomen } from "../campaign/campaign";
 
-export function PageHome() {
+export default function PageHome() {
   const Router = useRouter();
 
   return (
@@ -190,21 +191,21 @@ export function PageHome() {
                 </Text>
                 <Text size="sm">
                   Through partnerships with local organizations, we work
-                  collaboratively to maximize reach. Lorem ipsum dolor sit amet,
-                  consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                  ut labore et dolore magna aliqua. Ullamcorper sit amet risus
-                  nullam eget. Magna fringilla urna porttitor rhoncus dolor
-                  purus non. Fermentum dui faucibus in ornare quam. Integer quis
-                  auctor elit sed vulputate mi sit. Viverra orci sagittis eu
-                  volutpat. Ac placerat vestibulum lectus mauris ultrices. Vitae
-                  et leo duis ut diam quam nulla porttitor.
+                  collaboratively to maximize our collective impact and broaden
+                  community outreach. These alliances help us address real-world
+                  needs by combining resources and expertise. Together, we build
+                  scalable solutions that make a lasting difference. Whether
+                  through shared initiatives, training programs, or awareness
+                  campaigns, our goal is to foster growth, inclusion, and
+                  sustainability within the communities we serve.
                   <br />
                   <br />
-                  Quis vel eros donec ac odio tempor. Leo vel orci porta non
-                  pulvinar neque laoreet suspendisse interdum. Amet commodo
-                  nulla facilisi nullam vehicula ipsum a arcu cursus. Nibh
-                  mauris cursus mattis molestie a iaculis at erat. Iaculis urna
-                  id volutpat lacus laoreet non curabitur gravida arcu.
+                  By working alongside trusted local entities, we enhance
+                  engagement, boost efficiency, and deliver value at every
+                  level. Our unified efforts enable responsive action, improved
+                  accessibility, and stronger community ties. From planning to
+                  execution, we ensure that our approach remains
+                  people-centered, solution-driven, and results-oriented.
                 </Text>
 
                 <Group gap={0}>
@@ -233,7 +234,7 @@ export function PageHome() {
                     variant="subtle"
                     color="dark"
                     onClick={() => {
-                      Router.push("/team");
+                      Router.push("/beneficiaries");
                     }}
                   >
                     Beneficiaries
@@ -484,49 +485,52 @@ export function PageHome() {
           </Grid>
 
           <SimpleGrid cols={{ base: 1, lg: 2 }}>
-            <Box my="xl">
-              <Image
-                h={{ base: 300, lg: 600 }}
-                radius="xl"
-                src={imgMithilaArt2.src}
-              />
-              <Grid mt="md">
-                <Grid.Col span={{ base: 12, lg: 8 }}>
-                  <Text size="xl" lh="sm" fw={600}>
-                    Shivata Love Foundation Nepal organized a Mithila Art
-                    Exhibition
-                  </Text>
-                  <Group mt="sm">
-                    <Text size="xs" c="brand.6" fw={600}>
-                      August 18, 2024
+            {campaignWomen.slice(0, 1).map((campaign: any, index: number) => (
+              <Box my="xl" key={index}>
+                <Image
+                  h={{ base: 400, lg: 600 }}
+                  radius="xl"
+                  src={campaign.image}
+                />
+                <Grid mt="md">
+                  <Grid.Col span={{ base: 12, lg: 8 }}>
+                    <Group mt="sm">
+                      <Text size="xs" c="brand.6" fw={600}>
+                        {campaign.date}
+                      </Text>
+                      <Text size="xs">{campaign.location}</Text>
+                    </Group>
+                    <Text size="xl" lh="sm" fw={600}>
+                      {campaign.title}
                     </Text>
-                    <Text size="xs">Babarmahal, Kathmandu</Text>
-                  </Group>
-                </Grid.Col>
-              </Grid>
-            </Box>
-            <Box my="xl">
-              <Image
-                h={{ base: 300, lg: 600 }}
-                radius="xl"
-                src={imgScholarshipChina.src}
-              />
-              <Grid mt="md">
-                <Grid.Col span={{ base: 12, lg: 8 }}>
-                  <Text size="xl" lh="sm" fw={600}>
-                    Shivata Love Foundation Nepal organized a Mithila Art
-                    Exhibition
-                  </Text>
-
-                  <Group mt="sm">
-                    <Text size="xs" c="brand.6" fw={600}>
-                      August 18, 2024
-                    </Text>
-                    <Text size="xs">Babarmahal, Kathmandu</Text>
-                  </Group>
-                </Grid.Col>
-              </Grid>
-            </Box>
+                  </Grid.Col>
+                </Grid>
+              </Box>
+            ))}
+            {campaignEducation
+              .slice(0, 1)
+              .map((campaign: any, index: number) => (
+                <Box my="xl" key={index}>
+                  <Image
+                    h={{ base: 400, lg: 600 }}
+                    radius="xl"
+                    src={campaign.image}
+                  />
+                  <Grid mt="md">
+                    <Grid.Col span={{ base: 12, lg: 8 }}>
+                      <Group mt="sm">
+                        <Text size="xs" c="brand.6" fw={600}>
+                          {campaign.date}
+                        </Text>
+                        <Text size="xs">{campaign.location}</Text>
+                      </Group>
+                      <Text size="xl" lh="sm" fw={600}>
+                        {campaign.title}
+                      </Text>
+                    </Grid.Col>
+                  </Grid>
+                </Box>
+              ))}
           </SimpleGrid>
         </Container>
       </motion.section>

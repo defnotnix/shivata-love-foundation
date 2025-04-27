@@ -16,7 +16,7 @@ import {
 import { motion } from "framer-motion";
 import { beneficiaries } from "./data";
 
-export function PageBeneficiaries() {
+export default function PageBeneficiaries() {
   return (
     <>
       <motion.section
@@ -29,11 +29,11 @@ export function PageBeneficiaries() {
           radius={0}
           bg="linear-gradient(800deg, #E55454 0%, #7F2F2F 100%)"
         >
-          <Container size="xl" py={160}>
+          <Container size="xl" pt={160} pb={{ base: 64, lg: 160 }}>
             <Text size="6rem" fw={600} c="gray.0" visibleFrom="lg">
               BENEFICIARIES
             </Text>
-            <Text size="2rem" fw={600} c="gray.0" hiddenFrom="lg">
+            <Text size="3rem" fw={600} c="gray.0" hiddenFrom="lg">
               BENEFICIARIES
             </Text>
             <Grid mt="md">
@@ -64,7 +64,7 @@ export function PageBeneficiaries() {
             {beneficiaries.map((beneficiary: any, index: number) => (
               <Box my="xl" key={index}>
                 <Image
-                  h={400}
+                  h={{ base: 200, lg: 400 }}
                   radius="xl"
                   src={
                     beneficiary.image ||

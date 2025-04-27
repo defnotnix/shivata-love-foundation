@@ -12,7 +12,7 @@ import {
   Text,
 } from "@mantine/core";
 
-export function PageDonate() {
+export default function PageDonate() {
   return (
     <>
       <section>

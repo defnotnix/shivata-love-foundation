@@ -2,9 +2,11 @@
 
 import {
   Box,
+  Burger,
   Button,
   Container,
   Divider,
+  Drawer,
   Grid,
   Group,
   SimpleGrid,
@@ -12,17 +14,19 @@ import {
   Stack,
   Text,
 } from "@mantine/core";
-import { useWindowScroll } from "@mantine/hooks";
+import { useDisclosure, useWindowScroll } from "@mantine/hooks";
 import { usePathname, useRouter } from "next/navigation";
 import { PropsWithChildren } from "react";
 
-const redBgPages = ["/about", "/team", "/campaigns"];
+const redBgPages = ["/about", "/team", "/campaigns", "/beneficiaries"];
 
 export function LayoutSite({ children }: PropsWithChildren) {
   const Pathname = usePathname();
   const Router = useRouter();
 
   const [scroll, scrollTo] = useWindowScroll();
+
+  const [opened, setOpened] = useDisclosure(false);
 
   return (
     <>
@@ -224,6 +228,213 @@ export function LayoutSite({ children }: PropsWithChildren) {
         </Container>
       </Box>
 
+      <Box
+        hiddenFrom="lg"
+        style={{
+          position: "fixed",
+          top: 0,
+          width: "100vw",
+          backdropFilter: "blur(10px)",
+          zIndex: 99,
+        }}
+      >
+        <Container px="lg" py="sm">
+          <Group justify="space-between">
+            <Text
+              lh="xs"
+              size="sm"
+              fw={600}
+              c={
+                scroll.y < 500
+                  ? redBgPages.includes(Pathname)
+                    ? "gray.0"
+                    : "dark"
+                  : "dark"
+              }
+            >
+              SHIVATA LOVE
+              <br />
+              FOUNDATION
+            </Text>
+
+            <Burger
+              color={
+                scroll.y < 500
+                  ? redBgPages.includes(Pathname)
+                    ? "gray.0"
+                    : "dark"
+                  : "dark"
+              }
+              opened={opened}
+              onClick={() => setOpened.toggle()}
+            />
+          </Group>
+        </Container>
+
+        <Drawer
+          opened={opened}
+          onClose={() => setOpened.close()}
+          title="Navigation"
+        >
+          <Stack>
+            <Button
+              justify="flex-start"
+              size="48px"
+              pl={0}
+              variant="subtle"
+              c={
+                Pathname == "/"
+                  ? scroll.y < 500
+                    ? redBgPages.includes(Pathname)
+                      ? "dark"
+                      : "brand"
+                    : ""
+                  : scroll.y < 500
+                  ? redBgPages.includes(Pathname)
+                    ? "dark"
+                    : "dark"
+                  : "dark"
+              }
+              onClick={() => {
+                setOpened.close();
+                Router.push("/");
+              }}
+            >
+              Home
+            </Button>
+            <Button
+              justify="flex-start"
+              size="48px"
+              pl={0}
+              variant="subtle"
+              c={
+                Pathname == "/about"
+                  ? scroll.y < 500
+                    ? redBgPages.includes(Pathname)
+                      ? "dark"
+                      : "brand"
+                    : ""
+                  : scroll.y < 500
+                  ? redBgPages.includes(Pathname)
+                    ? "dark"
+                    : "dark"
+                  : "dark"
+              }
+              onClick={() => {
+                setOpened.close();
+                Router.push("/about");
+              }}
+            >
+              About
+            </Button>{" "}
+            <Button
+              justify="flex-start"
+              size="48px"
+              pl={0}
+              variant="subtle"
+              c={
+                Pathname == "/team"
+                  ? scroll.y < 500
+                    ? redBgPages.includes(Pathname)
+                      ? "dark"
+                      : "brand"
+                    : ""
+                  : scroll.y < 500
+                  ? redBgPages.includes(Pathname)
+                    ? "dark"
+                    : "dark"
+                  : "dark"
+              }
+              onClick={() => {
+                setOpened.close();
+
+                Router.push("/team");
+              }}
+            >
+              Team
+            </Button>{" "}
+            <Button
+              justify="flex-start"
+              size="48px"
+              pl={0}
+              variant="subtle"
+              c={
+                Pathname == "/perspective"
+                  ? scroll.y < 500
+                    ? redBgPages.includes(Pathname)
+                      ? "dark"
+                      : "brand"
+                    : ""
+                  : scroll.y < 500
+                  ? redBgPages.includes(Pathname)
+                    ? "dark"
+                    : "dark"
+                  : "dark"
+              }
+              onClick={() => {
+                setOpened.close();
+
+                Router.push("/perspective");
+              }}
+            >
+              Perspective
+            </Button>
+            <Button
+              justify="flex-start"
+              size="48px"
+              pl={0}
+              variant="subtle"
+              c={
+                Pathname == "/campaigns"
+                  ? scroll.y < 500
+                    ? redBgPages.includes(Pathname)
+                      ? "dark"
+                      : "dark"
+                    : ""
+                  : scroll.y < 500
+                  ? redBgPages.includes(Pathname)
+                    ? "dark"
+                    : "dark"
+                  : "dark"
+              }
+              onClick={() => {
+                setOpened.close();
+
+                Router.push("/campaigns");
+              }}
+            >
+              Campaigns
+            </Button>
+            <Button
+              justify="flex-start"
+              size="48px"
+              pl={0}
+              variant="subtle"
+              c={
+                Pathname == "/campaigns"
+                  ? scroll.y < 500
+                    ? redBgPages.includes(Pathname)
+                      ? "gray.0"
+                      : "dark"
+                    : ""
+                  : scroll.y < 500
+                  ? redBgPages.includes(Pathname)
+                    ? "dark"
+                    : "dark"
+                  : "dark"
+              }
+              onClick={() => {
+                setOpened.close();
+
+                Router.push("/beneficiaries");
+              }}
+            >
+              Beneficiaries
+            </Button>
+          </Stack>
+        </Drawer>
+      </Box>
+
       {children}
 
       <footer
@@ -232,7 +443,7 @@ export function LayoutSite({ children }: PropsWithChildren) {
           background: "linear-gradient(90deg,#150808,#291010)",
         }}
       >
-        <Container size="xl" pb={100} pt={{ base: 100, lg: 200 }}>
+        <Container size="xl" pb={100} pt={{ base: 200, lg: 200 }}>
           <SimpleGrid cols={{ base: 1, lg: 2 }}>
             <Stack>
               <Text size="sm" c="dark.0">

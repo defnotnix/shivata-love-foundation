@@ -9,16 +9,16 @@ import a8 from "./aw8.jpg";
 
 export const artworks = [
   {
-    label: "Artwork 1",
-    image: a1,
+    label: "Artwork 3",
+    image: a3,
   },
   {
     label: "Artwork 2",
     image: a2,
   },
   {
-    label: "Artwork 3",
-    image: a3,
+    label: "Artwork 1",
+    image: a1,
   },
 
   {

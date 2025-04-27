@@ -105,19 +105,21 @@ export function PageTeam() {
             <Text size="6rem" fw={600} c="gray.0" visibleFrom="lg">
               OUR TEAMS
             </Text>
-            <Text size="2rem" fw={600} c="gray.0" hiddenFrom="lg">
-              OUR TEAMS
+            <Text size="3rem" fw={600} c="gray.0" hiddenFrom="lg">
+              OUR
+              <br /> TEAMS
             </Text>
             <Grid mt="md">
               <Grid.Col span={{ lg: 1.5 }} offset={{ lg: 5 }}>
                 <Text size="sm" c="gray.0">
-                  HOME - ABOUT
+                  HOME - TEAMS
                 </Text>
               </Grid.Col>
               <Grid.Col span={{ lg: 3 }}>
                 <Text size="sm" c="gray.0">
-                  Dedicated to making a positive and lasting impact on the lives
-                  of individuals and communities.{" "}
+                  We are a collective of artists, creators, and cultural
+                  contributors from across Nepal, united by a shared commitment
+                  to social impact.
                 </Text>
               </Grid.Col>
             </Grid>

@@ -19,8 +19,12 @@ import { motion } from "framer-motion";
 import { variantGeneral } from "@/animate/variantGeneral";
 
 import imgPerspectiveWomen from "@/assets/image/perspective_women.png";
+import imgStudent from "@/assets/image/student.png";
+import imgLine from "@/assets/line.png";
+import imgMithila from "@/assets/campaigns/mithilaart_2.jpg";
+import imgHealth from "@/assets/image/health.png";
 
-export function PagePerspective() {
+export default function PagePerspective() {
   return (
     <>
       <motion.section
@@ -33,12 +37,13 @@ export function PagePerspective() {
           <Text size="6rem" fw={600} visibleFrom="lg">
             THE PERSPECTIVE
           </Text>
-          <Text size="2rem" fw={600} hiddenFrom="lg">
-            THE PERSPECTIVE
+          <Text size="3rem" fw={600} hiddenFrom="lg">
+            THE
+            <br /> PERSPECTIVE
           </Text>
           <Grid mt="md">
             <Grid.Col span={{ lg: 1.5 }} offset={{ lg: 5 }}>
-              <Text size="sm">HOME - ABOUT</Text>
+              <Text size="sm">HOME - PERSPECTIVE</Text>
             </Grid.Col>
             <Grid.Col span={{ lg: 3 }}>
               <Text size="sm">
@@ -137,6 +142,17 @@ export function PagePerspective() {
                   src={imgPerspectiveWomen.src}
                 />
 
+                <Image
+                  fit="contain"
+                  mt={-200}
+                  h="calc(100% + 50px)"
+                  src={imgLine.src}
+                  style={{
+                    position: "absolute",
+                    top: 160,
+                  }}
+                />
+
                 <Text size="xs" c="gray.0" ta="center" mt="xl">
                   Radika Mahoto
                 </Text>
@@ -161,7 +177,26 @@ export function PagePerspective() {
         >
           <Container size="xl" py={160}>
             <Grid>
-              <Grid.Col span={{ base: 12, lg: 5 }}></Grid.Col>
+              <Grid.Col span={{ base: 12, lg: 5 }} pos="relative" pt={200}>
+                <Image
+                  fit="contain"
+                  mt={-200}
+                  h="calc(100% + 50px)"
+                  src={imgStudent.src}
+                />
+
+                <Image
+                  fit="contain"
+                  w="90%"
+                  mt={-200}
+                  h="calc(100% + 50px)"
+                  src={imgLine.src}
+                  style={{
+                    position: "absolute",
+                    top: 160,
+                  }}
+                />
+              </Grid.Col>
               <Grid.Col span={{ base: 12, lg: 7 }}>
                 <Text size="sm" tt="uppercase">
                   PERSPECTIVE II - <b>Education For All</b>
@@ -246,7 +281,7 @@ export function PagePerspective() {
               PERSPECTIVE III - <b>Art & Culture</b>
             </Text>
 
-            <Grid>
+            <Grid gutter="xl">
               <Grid.Col span={{ base: 12, lg: 7 }}>
                 <Text size="3rem" fw={600} mt="sm" c="gray.0" visibleFrom="lg">
                   Committed to Preserving Heritage, Promoting Creativity, and
@@ -306,6 +341,36 @@ export function PagePerspective() {
                   </Stack>
                 </SimpleGrid>
               </Grid.Col>
+              <Grid.Col
+                span={{ base: 12, lg: 5 }}
+                pos="relative"
+                visibleFrom="lg"
+              >
+                <Image
+                  fit="contain"
+                  mt={-100}
+                  h="calc(100% + 50px)"
+                  src={imgMithila.src}
+                />
+
+                <Image
+                  fit="contain"
+                  mt={-100}
+                  h="calc(100% + 50px)"
+                  src={imgLine.src}
+                  style={{
+                    position: "absolute",
+                    top: 160,
+                  }}
+                />
+
+                <Text size="xs" c="gray.0" ta="center" mt="xl">
+                  Ragini Upadhyay Mam
+                </Text>
+                <Text size="xs" c="gray.0" ta="center" opacity={0.5}>
+                  Women Art Workshop with padam shree artist. 8th Augst 2024
+                </Text>
+              </Grid.Col>
             </Grid>
           </Container>
         </Paper>
@@ -323,8 +388,27 @@ export function PagePerspective() {
         >
           <Container size="xl" py={160}>
             <Grid>
-              <Grid.Col span={{ base: 12, lg: 5 }}></Grid.Col>
-              <Grid.Col span={{ base: 12, lg: 7 }}>
+              <Grid.Col span={{ base: 12, lg: 6 }} pos="relative" pt={200}>
+                <Image
+                  fit="contain"
+                  mt={-200}
+                  h="calc(100% + 50px)"
+                  src={imgHealth.src}
+                />
+
+                <Image
+                  fit="contain"
+                  w="90%"
+                  mt={-200}
+                  h="calc(100% + 50px)"
+                  src={imgLine.src}
+                  style={{
+                    position: "absolute",
+                    top: 160,
+                  }}
+                />
+              </Grid.Col>
+              <Grid.Col span={{ base: 12, lg: 6 }}>
                 <Text size="sm" tt="uppercase">
                   PERSPECTIVE IV - <b>Healthcare for All</b>
                 </Text>

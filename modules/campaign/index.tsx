@@ -16,7 +16,7 @@ import {
 import { motion } from "framer-motion";
 import { campaignEducation, campaignWomen } from "./campaign";
 
-export function PageCampaign() {
+export default function PageCampaign() {
   return (
     <>
       <motion.section
@@ -29,12 +29,13 @@ export function PageCampaign() {
           radius={0}
           bg="linear-gradient(800deg, #E55454 0%, #7F2F2F 100%)"
         >
-          <Container size="xl" py={160}>
+          <Container size="xl" pt={160} pb={{ base: 64, lg: 160 }}>
             <Text size="6rem" fw={600} c="gray.0" visibleFrom="lg">
               OUR CAMPAIGNS
             </Text>
-            <Text size="2rem" fw={600} c="gray.0" hiddenFrom="lg">
-              OUR CAMPAIGNS
+            <Text size="3rem" fw={600} c="gray.0" hiddenFrom="lg">
+              OUR
+              <br /> CAMPAIGNS
             </Text>
             <Grid mt="md">
               <Grid.Col span={{ lg: 1.5 }} offset={{ lg: 5 }}>
@@ -44,8 +45,7 @@ export function PageCampaign() {
               </Grid.Col>
               <Grid.Col span={{ lg: 3 }}>
                 <Text size="sm" c="gray.0">
-                  Dedicated to making a positive and lasting impact on the lives
-                  of individuals and communities.{" "}
+                  An overview of our campaigns in different sectors.
                 </Text>
               </Grid.Col>
             </Grid>
@@ -59,7 +59,7 @@ export function PageCampaign() {
         animate="visible"
         viewport={{ once: true }}
       >
-        <Container size="xl" py={100}>
+        <Container size="xl" py={{ base: 64, lg: 100 }}>
           <Stack gap="4rem">
             <div>
               <SimpleGrid mt="md" cols={{ base: 1, lg: 2 }}>
@@ -68,10 +68,29 @@ export function PageCampaign() {
                   <br />
                   Empowerment
                 </Text>
-                <Text ta="right" size="2rem" fw={600} opacity={0.5} c="brand.6">
+                <Text
+                  ta="right"
+                  size="2rem"
+                  fw={600}
+                  opacity={0.5}
+                  c="brand.6"
+                  visibleFrom="lg"
+                >
                   Building a Future Where
                   <br /> Women Thrive with Equality,
                   <br /> Opportunity, and Empowerment
+                </Text>
+
+                <Text
+                  ta="left"
+                  size="sm"
+                  fw={600}
+                  opacity={0.5}
+                  c="brand.6"
+                  hiddenFrom="lg"
+                >
+                  Building a Future Where Women Thrive with Equality,
+                  Opportunity, and Empowerment
                 </Text>
               </SimpleGrid>
             </div>
@@ -80,7 +99,11 @@ export function PageCampaign() {
           <SimpleGrid cols={{ base: 1, lg: 2 }}>
             {campaignWomen.map((campaign: any, index: number) => (
               <Box my="xl" key={index}>
-                <Image h="600px" radius="xl" src={campaign.image} />
+                <Image
+                  h={{ base: 400, lg: 600 }}
+                  radius="xl"
+                  src={campaign.image}
+                />
                 <Grid mt="md">
                   <Grid.Col span={{ base: 12, lg: 8 }}>
                     <Text size="xl" lh="sm" fw={600}>
@@ -90,7 +113,7 @@ export function PageCampaign() {
                       <Text size="xs" c="brand.6" fw={600}>
                         {campaign.date}
                       </Text>
-                      {/* <Text size="xs">Babarmahal, Kathmandu</Text> */}
+                      <Text size="xs">{campaign.location}</Text>
                     </Group>
                   </Grid.Col>
                 </Grid>
@@ -112,6 +135,7 @@ export function PageCampaign() {
                 fw={600}
                 opacity={0.5}
                 c="brand.6"
+                visibleFrom="lg"
               >
                 Building a Future Where
                 <br />
@@ -119,13 +143,28 @@ export function PageCampaign() {
                 <br />
                 Opportunity, and Empowerment
               </Text>
+              <Text
+                ta={{ base: "left", lg: "right" }}
+                size="sm"
+                fw={600}
+                opacity={0.5}
+                c="brand.6"
+                hiddenFrom="lg"
+              >
+                Building a Future Where Women Thrive with Equality, Opportunity,
+                and Empowerment
+              </Text>
             </SimpleGrid>
           </Stack>
 
           <SimpleGrid cols={{ base: 1, lg: 2 }}>
             {campaignEducation.map((campaign: any, index: number) => (
               <Box my="xl" key={index}>
-                <Image h="600px" radius="xl" src={campaign.image} />
+                <Image
+                  h={{ base: 400, lg: 600 }}
+                  radius="xl"
+                  src={campaign.image}
+                />
                 <Grid mt="md">
                   <Grid.Col span={{ base: 12, lg: 8 }}>
                     <Text size="xl" lh="sm" fw={600}>
@@ -135,7 +174,7 @@ export function PageCampaign() {
                       <Text size="xs" c="brand.6" fw={600}>
                         {campaign.date}
                       </Text>
-                      {/* <Text size="xs">Babarmahal, Kathmandu</Text> */}
+                      <Text size="xs">{campaign.location}</Text>
                     </Group>
                   </Grid.Col>
                 </Grid>

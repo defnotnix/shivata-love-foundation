@@ -1,2 +1,13 @@
-import { PagePerspective } from "@/modules/perspective";
-export default PagePerspective
+"use client";
+
+//import { PageHome } from "@/modules/home";
+
+import dynamic from "next/dynamic";
+
+const _Page = dynamic(() => import("../../../modules/perspective/index"), {
+  ssr: false,
+});
+
+export default function Page() {
+  return <_Page />;
+}

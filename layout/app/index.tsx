@@ -8,11 +8,10 @@ import {
   MantineProvider,
   useMantineColorScheme,
 } from "@mantine/core";
-import { ModalsProvider } from "@mantine/modals";
-import { Notifications } from "@mantine/notifications";
 //@mantine-styles
 import "@mantine/core/styles.css";
 import "@mantine/notifications/styles.css";
+import "@mantine/carousel/styles.css";
 //props
 import "@/public/global.css";
 
@@ -76,10 +75,7 @@ export function AppWrapper({ children }: PropsWithChildren) {
             },
           })}
         >
-          <ModalsProvider>
-            <Notifications />
-            {children}
-          </ModalsProvider>
+          {children}
         </MantineProvider>
       </body>
     </html>
