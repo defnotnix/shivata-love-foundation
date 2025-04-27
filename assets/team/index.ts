@@ -6,6 +6,7 @@ import imgRagini from "./Ragini Upadhyaya - President.jpeg";
 import imgRajan from "./Rajan pandey- Board member.jpg";
 import imgRampujan from "./Rampujan Thakur- Secretary.jpg";
 import imgShivata from "./shivata.jpg";
+import imgSangita from "./b10.jpeg";
 
 export const team = {
   imgAnkur,
@@ -16,4 +17,5 @@ export const team = {
   imgRajan,
   imgRampujan,
   imgShivata,
+  imgSangita,
 };

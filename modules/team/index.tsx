@@ -64,6 +64,12 @@ const teams = [
       "Managing Director at Solution of Nepal Engineering Consultancy Pvt.Ltd",
     image: team.imgAnkur.src,
   },
+  {
+    name: "Sangita Shrestha",
+    position: "Board Member",
+    career: "",
+    image: team.imgSangita.src,
+  },
 ];
 
 export function PageTeam() {

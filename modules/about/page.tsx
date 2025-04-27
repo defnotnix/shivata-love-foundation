@@ -24,6 +24,7 @@ import imgShivata from "@/assets/image/shivata.jpg";
 import imgBlob from "@/assets/image/Vector.png";
 import imgPerson from "@/assets/image/Subtract.png";
 import imgPie from "@/assets/image/pie50.png";
+import imgEstd from "@/assets/image/estd.jpeg";
 
 import { categories, prevention, symptoms } from "./data";
 
@@ -130,7 +131,7 @@ export default function PageAbout() {
               <Image
                 radius="lg"
                 mt={{ base: 0, lg: "4rem" }}
-                src={imgTeam2.src}
+                src={imgEstd.src}
               />
 
               <Text size="sm" mt="xl">

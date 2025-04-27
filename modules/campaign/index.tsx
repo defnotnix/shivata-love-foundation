@@ -14,7 +14,13 @@ import {
 } from "@mantine/core";
 
 import { motion } from "framer-motion";
-import { campaignEducation, campaignWomen } from "./campaign";
+import {
+  campaignArtAndCulture,
+  campaignChildEmpowerment,
+  campaignDisasterRelief,
+  campaignEducation,
+  campaignWomen,
+} from "./campaign";
 
 export default function PageCampaign() {
   return (
@@ -182,6 +188,194 @@ export default function PageCampaign() {
             ))}
           </SimpleGrid>
         </Container>
+
+        <Container size="xl" pb={100}>
+          <Stack gap="4rem">
+            <SimpleGrid mt="md" cols={{ base: 1, lg: 2 }}>
+              <Text size="3rem" fw={600}>
+                Children
+                <br />
+                Empowerment
+              </Text>
+              <Text
+                ta={{ base: "left", lg: "right" }}
+                size="2rem"
+                fw={600}
+                opacity={0.5}
+                c="brand.6"
+                visibleFrom="lg"
+              >
+                Building a Future Where
+                <br />
+                Children Grow with Confidence,
+                <br />
+                Opportunity, and Endless Possibilities
+              </Text>
+              <Text
+                ta={{ base: "left", lg: "right" }}
+                size="sm"
+                fw={600}
+                opacity={0.5}
+                c="brand.6"
+                hiddenFrom="lg"
+              >
+                Building a Future Where Children Grow with Confidence,
+                Opportunity, and Endless Possibilities
+              </Text>
+            </SimpleGrid>
+          </Stack>
+
+          <SimpleGrid cols={{ base: 1, lg: 2 }}>
+            {campaignChildEmpowerment.map((campaign: any, index: number) => (
+              <Box my="xl" key={index}>
+                <Image
+                  h={{ base: 400, lg: 600 }}
+                  radius="xl"
+                  src={campaign.image}
+                />
+                <Grid mt="md">
+                  <Grid.Col span={{ base: 12, lg: 8 }}>
+                    <Text size="xl" lh="sm" fw={600}>
+                      {campaign.title}
+                    </Text>
+                    <Group mt="sm">
+                      <Text size="xs" c="brand.6" fw={600}>
+                        {campaign.date}
+                      </Text>
+                      <Text size="xs">{campaign.location}</Text>
+                    </Group>
+                  </Grid.Col>
+                </Grid>
+              </Box>
+            ))}
+          </SimpleGrid>
+        </Container>
+
+        <Container size="xl" pb={100}>
+          <Stack gap="4rem">
+            <SimpleGrid mt="md" cols={{ base: 1, lg: 2 }}>
+              <Text size="3rem" fw={600}>
+                Disaster
+                <br />
+                Relief
+              </Text>
+              <Text
+                ta={{ base: "left", lg: "right" }}
+                size="2rem"
+                fw={600}
+                opacity={0.5}
+                c="brand.6"
+                visibleFrom="lg"
+              >
+                Building a Future Where
+                <br />
+                Communities Rise Stronger,
+                <br />
+                Safer, and More Resilient
+              </Text>
+              <Text
+                ta={{ base: "left", lg: "right" }}
+                size="sm"
+                fw={600}
+                opacity={0.5}
+                c="brand.6"
+                hiddenFrom="lg"
+              >
+                Building a Future Where Communities Rise Stronger, Safer, and
+                More Resilient
+              </Text>
+            </SimpleGrid>
+          </Stack>
+
+          <SimpleGrid cols={{ base: 1, lg: 2 }}>
+            {campaignDisasterRelief.map((campaign: any, index: number) => (
+              <Box my="xl" key={index}>
+                <Image
+                  h={{ base: 400, lg: 600 }}
+                  radius="xl"
+                  src={campaign.image}
+                />
+                <Grid mt="md">
+                  <Grid.Col span={{ base: 12, lg: 8 }}>
+                    <Text size="xl" lh="sm" fw={600}>
+                      {campaign.title}
+                    </Text>
+                    <Group mt="sm">
+                      <Text size="xs" c="brand.6" fw={600}>
+                        {campaign.date}
+                      </Text>
+                      <Text size="xs">{campaign.location}</Text>
+                    </Group>
+                  </Grid.Col>
+                </Grid>
+              </Box>
+            ))}
+          </SimpleGrid>
+        </Container>
+
+        <Container size="xl" pb={100}>
+          <Stack gap="4rem">
+            <SimpleGrid mt="md" cols={{ base: 1, lg: 2 }}>
+              <Text size="3rem" fw={600}>
+                Art &
+                <br />
+                Culture
+              </Text>
+              <Text
+                ta={{ base: "left", lg: "right" }}
+                size="2rem"
+                fw={600}
+                opacity={0.5}
+                c="brand.6"
+                visibleFrom="lg"
+              >
+                Building a Future Where
+                <br />
+                Creativity Flourishes,
+                <br />
+                Heritage Lives On, and Stories Inspire
+              </Text>
+              <Text
+                ta={{ base: "left", lg: "right" }}
+                size="sm"
+                fw={600}
+                opacity={0.5}
+                c="brand.6"
+                hiddenFrom="lg"
+              >
+                Building a Future Where Creativity Flourishes, Heritage Lives
+                On, and Stories Inspire
+              </Text>
+            </SimpleGrid>
+          </Stack>
+
+          <SimpleGrid cols={{ base: 1, lg: 2 }}>
+            {campaignArtAndCulture.map((campaign: any, index: number) => (
+              <Box my="xl" key={index}>
+                <Image
+                  h={{ base: 400, lg: 600 }}
+                  radius="xl"
+                  src={campaign.image}
+                />
+                <Grid mt="md">
+                  <Grid.Col span={{ base: 12, lg: 8 }}>
+                    <Text size="xl" lh="sm" fw={600}>
+                      {campaign.title}
+                    </Text>
+                    <Group mt="sm">
+                      <Text size="xs" c="brand.6" fw={600}>
+                        {campaign.date}
+                      </Text>
+                      <Text size="xs">{campaign.location}</Text>
+                    </Group>
+                  </Grid.Col>
+                </Grid>
+              </Box>
+            ))}
+          </SimpleGrid>
+        </Container>
+
+      
       </motion.section>
     </>
   );

@@ -12,6 +12,8 @@ import {
   Text,
 } from "@mantine/core";
 
+import imgFoneQR from "@/assets/image/nicQR.png";
+
 export default function PageDonate() {
   return (
     <>
@@ -80,47 +82,6 @@ export default function PageDonate() {
             <SimpleGrid cols={{ base: 1, lg: 2 }}>
               <div>
                 <Text size="2rem" fw={600}>
-                  NMB Bank
-                </Text>
-
-                <Stack gap="xs" mt="xl">
-                  <Group wrap="nowrap" align="flex-start">
-                    <Text size="md" w={150} fw={600}>
-                      Account Name
-                    </Text>
-                    <Text size="md" fw={600} w={{ base: "60%", lg: "auto" }}>
-                      : Shivata Love Foundation Nepal
-                    </Text>
-                  </Group>
-                  <Group wrap="nowrap" align="flex-start">
-                    <Text size="md" w={150} fw={600}>
-                      Account Number
-                    </Text>
-                    <Text size="md" fw={600} w={{ base: "60%", lg: "auto" }}>
-                      : 0010053651600015
-                    </Text>
-                  </Group>
-                  <Group wrap="nowrap" align="flex-start">
-                    <Text size="md" w={150} fw={600}>
-                      Bank Details{" "}
-                    </Text>
-                    <Text size="md" fw={600} w={{ base: "60%", lg: "auto" }}>
-                      : NMB Bank Ltd, Babar Mahal, Kathmandu, Nepal
-                    </Text>
-                  </Group>
-                  <Group wrap="nowrap" align="flex-start">
-                    <Text size="md" w={150} fw={600}>
-                      BIC/SWIFT{" "}
-                    </Text>
-                    <Text size="md" fw={600} w={{ base: "60%", lg: "auto" }}>
-                      : NMBBNPKA
-                    </Text>
-                  </Group>
-                </Stack>
-              </div>
-
-              <div>
-                <Text size="2rem" fw={600}>
                   Sanima Bank
                 </Text>
 
@@ -159,6 +120,12 @@ export default function PageDonate() {
                   </Group>
                 </Stack>
               </div>
+
+              <Group justify="flex-end">
+                <Paper withBorder>
+                  <Image w={300} src={imgFoneQR.src} />
+                </Paper>
+              </Group>
             </SimpleGrid>
           </Stack>
         </Container>

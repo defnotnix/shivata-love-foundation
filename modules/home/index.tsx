@@ -31,7 +31,11 @@ import imgScholarshipChina from "@/assets/campaigns/scholarshipChina.jpg";
 import imgArtsupplies from "@/assets/campaigns/artsuppliesschool.jpg";
 import { variantGeneral } from "@/animate/variantGeneral";
 import imgSchool from "@/assets/image/school.jpg";
-import { campaignEducation, campaignWomen } from "../campaign/campaign";
+import {
+  campaignArtAndCulture,
+  campaignEducation,
+  campaignWomen,
+} from "../campaign/campaign";
 
 export default function PageHome() {
   const Router = useRouter();
@@ -71,7 +75,13 @@ export default function PageHome() {
 
             <Grid mt="md">
               <Grid.Col span={{ lg: 1.5 }} offset={{ lg: 5 }}>
-                <Anchor c="dark.9" td="underline">
+                <Anchor
+                  c="dark.9"
+                  td="underline"
+                  onClick={() => {
+                    Router.push("/about");
+                  }}
+                >
                   LEARN MORE
                 </Anchor>
               </Grid.Col>
@@ -429,10 +439,22 @@ export default function PageHome() {
             </Grid.Col>
             <Grid.Col span={{ base: 12, lg: 4 }}>
               <Group>
-                <Anchor c="dark.9" td="underline">
+                <Anchor
+                  c="brand.6"
+                  td="underline"
+                  onClick={() => {
+                    Router.push("/about");
+                  }}
+                >
                   LEARN MORE
                 </Anchor>
-                <Anchor c="dark.9" td="underline">
+                <Anchor
+                  c="brand.6"
+                  td="underline"
+                  onClick={() => {
+                    Router.push("/perspective");
+                  }}
+                >
                   OUR PERSPECTIVE
                 </Anchor>
               </Group>
@@ -485,28 +507,30 @@ export default function PageHome() {
           </Grid>
 
           <SimpleGrid cols={{ base: 1, lg: 2 }}>
-            {campaignWomen.slice(0, 1).map((campaign: any, index: number) => (
-              <Box my="xl" key={index}>
-                <Image
-                  h={{ base: 400, lg: 600 }}
-                  radius="xl"
-                  src={campaign.image}
-                />
-                <Grid mt="md">
-                  <Grid.Col span={{ base: 12, lg: 8 }}>
-                    <Group mt="sm">
-                      <Text size="xs" c="brand.6" fw={600}>
-                        {campaign.date}
+            {campaignArtAndCulture
+              .slice(1, 2)
+              .map((campaign: any, index: number) => (
+                <Box my="xl" key={index}>
+                  <Image
+                    h={{ base: 400, lg: 600 }}
+                    radius="xl"
+                    src={campaign.image}
+                  />
+                  <Grid mt="md">
+                    <Grid.Col span={{ base: 12, lg: 8 }}>
+                      <Group mt="sm">
+                        <Text size="xs" c="brand.6" fw={600}>
+                          {campaign.date}
+                        </Text>
+                        <Text size="xs">{campaign.location}</Text>
+                      </Group>
+                      <Text size="xl" lh="sm" fw={600}>
+                        {campaign.title}
                       </Text>
-                      <Text size="xs">{campaign.location}</Text>
-                    </Group>
-                    <Text size="xl" lh="sm" fw={600}>
-                      {campaign.title}
-                    </Text>
-                  </Grid.Col>
-                </Grid>
-              </Box>
-            ))}
+                    </Grid.Col>
+                  </Grid>
+                </Box>
+              ))}
             {campaignEducation
               .slice(0, 1)
               .map((campaign: any, index: number) => (
@@ -585,7 +609,14 @@ export default function PageHome() {
                   justifyContent: "flex-end",
                 }}
               >
-                <Anchor ta="right" td="underline" c="gray.0">
+                <Anchor
+                  ta="right"
+                  td="underline"
+                  c="gray.0"
+                  onClick={() => {
+                    Router.push("/donate");
+                  }}
+                >
                   DONATE FOR A CAUSE
                 </Anchor>
               </Grid.Col>

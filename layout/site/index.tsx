@@ -18,7 +18,13 @@ import { useDisclosure, useWindowScroll } from "@mantine/hooks";
 import { usePathname, useRouter } from "next/navigation";
 import { PropsWithChildren } from "react";
 
-const redBgPages = ["/about", "/team", "/campaigns", "/beneficiaries"];
+const redBgPages = [
+  "/about",
+  "/team",
+  "/campaigns",
+  "/beneficiaries",
+  "/donate",
+];
 
 export function LayoutSite({ children }: PropsWithChildren) {
   const Pathname = usePathname();
@@ -45,9 +51,12 @@ export function LayoutSite({ children }: PropsWithChildren) {
           <Grid align="center">
             <Grid.Col span={{ base: 12, lg: 3 }}>
               <Text
+                onClick={() => {
+                  Router.push("/");
+                }}
                 lh="xs"
                 size="sm"
-                fw={600}
+                fw={800}
                 c={
                   scroll.y < 500
                     ? redBgPages.includes(Pathname)
@@ -177,7 +186,7 @@ export function LayoutSite({ children }: PropsWithChildren) {
                   size="sm"
                   variant="subtle"
                   c={
-                    Pathname == "/campaigns"
+                    Pathname == "/beneficiaries"
                       ? scroll.y < 500
                         ? redBgPages.includes(Pathname)
                           ? "gray.0"
@@ -221,7 +230,13 @@ export function LayoutSite({ children }: PropsWithChildren) {
                 >
                   Contact Us
                 </Text>
-                <Button>Donate Now</Button>
+                <Button
+                  onClick={() => {
+                    Router.push("/donate");
+                  }}
+                >
+                  Donate Now
+                </Button>
               </Group>
             </Grid.Col>
           </Grid>
