@@ -489,6 +489,12 @@ export function LayoutSite({ children }: PropsWithChildren) {
                       <Text size="md" c="dark.0" opacity={0.5}>
                         Building
                       </Text>
+                      <Text size="md" c="dark.0" opacity={1}>
+                        Shivata Love Foundation Branhc Office <br />
+                        Building
+                        <br />
+                        <br />
+                      </Text>
                       <Text size="md" c="dark.0">
                         Ragini Art Center Building Balkot Bhaktapur, Nepal.
                       </Text>
@@ -507,7 +513,7 @@ export function LayoutSite({ children }: PropsWithChildren) {
                         Phone
                       </Text>
                       <Text size="md" c="dark.0">
-                        01-6632088
+                        01-6630335
                       </Text>
                     </div>
                     <div>
@@ -515,8 +521,7 @@ export function LayoutSite({ children }: PropsWithChildren) {
                         Email
                       </Text>
                       <Text size="md" c="dark.0" visibleFrom="lg">
-                        info@shivata-love.org
-                        <br /> shivatalovefoundation16@gmail.com{" "}
+                        shivatalovefoundation16@gmail.com{" "}
                       </Text>
                       <Text size="md" c="dark.0" hiddenFrom="lg">
                         info@shivata-love.org

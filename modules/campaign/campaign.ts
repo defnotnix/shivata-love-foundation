@@ -35,9 +35,9 @@ export const campaignWomen = [
   {
     image: imgMithilaWorkshop.src,
     title:
-      "Awadhi Folk Art Training Workshop Empowering Women Artists in Kapilbastu, Lumbini",
+      "Awadhi Folk Art Training Workshop Empowering Women Artists in Kapilvastu, Lumbini",
     date: "2020",
-    location: "Kapilbastu District, Lumbini Province, Nepal",
+    location: "Kapilvastu District, Lumbini Province, Nepal",
   },
 ];
 
@@ -59,16 +59,16 @@ export const campaignEducation = [
   {
     image: imgScholarship.src,
     title:
-      "Scholarship Awards for Nepali Students Pursuing Design Education at Suzhou Art Institute, China",
+      "Scholarship Awards for Nepali Students Pursuing Design Education at Suzhou Art and Design Technology Institute, Suzhou , China.",
     date: "2019",
-    location: "Morang District, Province 1, Nepal",
+    location: "Suzhou Art and Design Technology Institute, Suzhou , China.",
   },
   {
     image: imgSLFN.src,
     title:
       "SLFN-Funded Scholarships for Higher Educational Advancement in China",
     date: "2025",
-    location: "Ragini Art Center, Bhaktapur, Nepal",
+    location: "Nepal Art Council, Babar Mahal, Kathmandu, Nepal",
   },
   {
     image: imgLiterayMorang.src,
@@ -91,14 +91,14 @@ export const campaignChildEmpowerment = [
     image: imgChildBhaktapur.src,
     title:
       "Art and Education Initiative to Empower Underprivileged Children in Bhaktapur",
-    date: "",
+    date: "2017",
     location: "Bhaktapur, Kathmandu Valley, Nepal",
   },
   {
     image: imgChildBhaktapur2.src,
     title:
       "School Upgrades and Learning Environment Enhancements for Future Generations",
-    date: "December 24, 2024",
+    date: "2017",
     location: "Bhaktapur, Kathmandu Valley, Nepal",
   },
 ];
@@ -108,14 +108,14 @@ export const campaignDisasterRelief = [
     image: imgDisasterCorona.src,
     title:
       "Food Relief Mission for Pawitra Samaj Orphanage During COVID-19 Emergency in Budhanilkantha",
-    date: "",
+    date: "2020",
     location: "Budhanilkantha-4, Kathmandu District, Nepal",
   },
   {
     image: imgCovidRelief.src,
     title:
       "COVID-19 Relief Distribution for Women and Families in Motherland Women Society, Kathmandu",
-    date: "2020",
+    date: "2021",
     location: "Kathmandu Metropolitan City, Nepal",
   },
   {
@@ -131,9 +131,9 @@ export const campaignArtAndCulture = [
   {
     image: imgAwadhiArt.src,
     title:
-      "Awadhi Folk Art Promotion and Traditional Cultural Preservation Initiative in Kapilbastu",
-    date: "2020",
-    location: "Kapilbastu District, Lumbini Province, Nepal",
+      "Awadhi Folk Art Promotion and Traditional Cultural Preservation Initiative in Kapilvastu",
+    date: "2019",
+    location: "Kapilvastu District, Lumbini Province, Nepal",
   },
   {
     image: imgShivata30.src,
@@ -145,8 +145,8 @@ export const campaignArtAndCulture = [
   {
     image: imgAwadhiArtWomen.src,
     title:
-      "Awadhi Folk Art Training and Women-Led Cultural Revival Program in Kapilbastu, Lumbini",
-    date: "2020",
-    location: "Kapilbastu District, Lumbini Province, Nepal",
+      "Awadhi Folk Art Training and Women-Led Cultural Revival Program in Kapilvastu, Lumbini",
+    date: "2019",
+    location: "Kapilvastu District, Lumbini Province, Nepal",
   },
 ];

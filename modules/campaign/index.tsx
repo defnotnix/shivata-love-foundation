@@ -145,9 +145,9 @@ export default function PageCampaign() {
               >
                 Building a Future Where
                 <br />
-                Women Thrive with Equality,
+                Education Unlocks Potential,
                 <br />
-                Opportunity, and Empowerment
+                Dreams Take Flight, and Communities Prosper
               </Text>
               <Text
                 ta={{ base: "left", lg: "right" }}
@@ -157,8 +157,8 @@ export default function PageCampaign() {
                 c="brand.6"
                 hiddenFrom="lg"
               >
-                Building a Future Where Women Thrive with Equality, Opportunity,
-                and Empowerment
+                Building a Future Where Education Unlocks Potential, Dreams Take
+                Flight, and Communities Prosper
               </Text>
             </SimpleGrid>
           </Stack>
@@ -374,8 +374,6 @@ export default function PageCampaign() {
             ))}
           </SimpleGrid>
         </Container>
-
-      
       </motion.section>
     </>
   );
