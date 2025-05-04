@@ -51,7 +51,7 @@ export function LayoutSite({ children }: PropsWithChildren) {
       >
         <Container size="xl" py="xs">
           <Grid align="center">
-            <Grid.Col span={{ base: 12, lg: 3 }}>
+            <Grid.Col span={{ base: 12, lg: 2 }}>
               <Text
                 onClick={() => {
                   Router.push("/");
@@ -72,7 +72,7 @@ export function LayoutSite({ children }: PropsWithChildren) {
                 FOUNDATION
               </Text>
             </Grid.Col>
-            <Grid.Col span={{ base: 12, lg: 6 }}>
+            <Grid.Col span={{ base: 12, lg: 8 }}>
               <Group justify="center" gap={0}>
                 <Button
                   size="sm"
@@ -206,9 +206,31 @@ export function LayoutSite({ children }: PropsWithChildren) {
                 >
                   Beneficiaries
                 </Button>
+                <Button
+                  size="sm"
+                  variant="subtle"
+                  c={
+                    Pathname == "/exposure"
+                      ? scroll.y < 500
+                        ? redBgPages.includes(Pathname)
+                          ? "gray.0"
+                          : "dark"
+                        : ""
+                      : scroll.y < 500
+                      ? redBgPages.includes(Pathname)
+                        ? "rgba(255,255,255,.5)"
+                        : "dark"
+                      : "dark"
+                  }
+                  onClick={() => {
+                    Router.push("/exposure");
+                  }}
+                >
+                  Media Exposure
+                </Button>
               </Group>
             </Grid.Col>
-            <Grid.Col span={{ base: 12, lg: 3 }}>
+            <Grid.Col span={{ base: 12, lg: 2 }}>
               <Group justify="flex-end">
                 <Text
                   style={{
@@ -230,14 +252,14 @@ export function LayoutSite({ children }: PropsWithChildren) {
                       : "dark"
                   }
                 >
-                  Contact Us
+                  Contact
                 </Text>
                 <Button
                   onClick={() => {
                     Router.push("/donate");
                   }}
                 >
-                  Donate Now
+                  Donate
                 </Button>
               </Group>
             </Grid.Col>
@@ -428,7 +450,7 @@ export function LayoutSite({ children }: PropsWithChildren) {
               pl={0}
               variant="subtle"
               c={
-                Pathname == "/campaigns"
+                Pathname == "/beneficiaries"
                   ? scroll.y < 500
                     ? redBgPages.includes(Pathname)
                       ? "gray.0"
@@ -447,6 +469,32 @@ export function LayoutSite({ children }: PropsWithChildren) {
               }}
             >
               Beneficiaries
+            </Button>
+            <Button
+              justify="flex-start"
+              size="48px"
+              pl={0}
+              variant="subtle"
+              c={
+                Pathname == "/exposure"
+                  ? scroll.y < 500
+                    ? redBgPages.includes(Pathname)
+                      ? "gray.0"
+                      : "dark"
+                    : ""
+                  : scroll.y < 500
+                  ? redBgPages.includes(Pathname)
+                    ? "dark"
+                    : "dark"
+                  : "dark"
+              }
+              onClick={() => {
+                setOpened.close();
+
+                Router.push("/exposure");
+              }}
+            >
+              Media Exposure
             </Button>
           </Stack>
         </Drawer>
@@ -630,6 +678,15 @@ export function LayoutSite({ children }: PropsWithChildren) {
                       }}
                     >
                       Beneficiaries
+                    </Anchor>
+                    <Anchor
+                      size="sm"
+                      c="dark.0"
+                      onClick={() => {
+                        Router.push("/exposure");
+                      }}
+                    >
+                      Media Exposure
                     </Anchor>
                   </Stack>
                 </div>
