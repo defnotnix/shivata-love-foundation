@@ -27,17 +27,11 @@ const teamtop = [
   },
 ];
 
-const teams = [
-  {
-    name: "Mr. Ram Pujan Thakur",
-    position: "Secretary",
-    career: "Assembly Member, Nepal Academy of Fine Art",
-    image: team.imgRampujan.src,
-  },
+const teamrepresents = [
   {
     name: "Mr. Jip Opdestip",
     position: "Representative - Netherlands",
-    career: "Musician",
+    career: "",
     image: team.imgJip.src,
   },
   {
@@ -46,6 +40,31 @@ const teams = [
     career: "Founder/Director, Vogue Interiors Nepal",
     image: team.imgKriti.src,
   },
+];
+
+const teams = [
+  {
+    name: "Atul Koirala",
+    position: "Vice-President",
+    career: "General Secretary of Sushil Koirala Memorial Foundation",
+    image: team.imgAtul.src,
+  },
+  {
+    name: "Mr. Ram Pujan Thakur",
+    position: "Secretary",
+    career: "Assembly Member, Nepal Academy of Fine Art",
+    image: team.imgRampujan.src,
+  },
+  {
+    name: "Ankur Dhungana",
+    position: "Treasurer",
+    career:
+      "Managing Director at Solution of Nepal Engineering Consultancy Pvt.Ltd",
+    image: team.imgAnkur.src,
+  },
+];
+
+const teamBoards = [
   {
     name: "Rajan Pandey",
     position: "Board Member",
@@ -63,19 +82,7 @@ const teams = [
     career: "Visual Artist/ Co-Founder at E-Art Nepal",
     image: team.imgErina.src,
   },
-  {
-    name: "Atul Koirala",
-    position: "Board Member",
-    career: "General Secretary of Sushil Koirala Memorial Foundation",
-    image: team.imgAtul.src,
-  },
-  {
-    name: "Ankur Dhungana",
-    position: "Treasurer",
-    career:
-      "Managing Director at Solution of Nepal Engineering Consultancy Pvt.Ltd",
-    image: team.imgAnkur.src,
-  },
+
   {
     name: "Sangita Shrestha",
     position: "Board Member",
@@ -100,7 +107,7 @@ export function PageTeam() {
         <Text size="md" fw={600} c="brand.6">
           {details?.position}
         </Text>
-        <Text size="xs" fw={600} opacity={0.5}>
+        <Text size="sm" fw={600} opacity={0.5}>
           {details?.career || "Board Member, Shivata Love Foundation"}
         </Text>
       </Box>
@@ -166,10 +173,61 @@ export function PageTeam() {
               <TeamCard key={index} details={teaminfo} />
             ))}
             <Box visibleFrom="lg" />
+          </SimpleGrid>
 
-            {teams.map((teaminfo: any, index: number) => (
+          <Container w={1000}>
+            <SimpleGrid cols={{ base: 2, lg: 3 }}>
+              {teams.map((teaminfo: any, index: number) => (
+                <TeamCard key={index} details={teaminfo} />
+              ))}
+            </SimpleGrid>
+          </Container>
+        </Container>
+      </motion.section>
+
+      <motion.section
+        variants={variantGeneral}
+        initial="initial"
+        animate="visible"
+        viewport={{ once: true }}
+      >
+        <Container size="xl" pb={100}>
+          <Text size="md" c="brand.6" fw={600} ta="center">
+            Board
+          </Text>
+          <Text size="3rem" fw={600} ta="center">
+            Board Members
+          </Text>
+
+          <SimpleGrid cols={{ base: 2, lg: 4 }} py="xl">
+            {teamBoards.map((teaminfo: any, index: number) => (
               <TeamCard key={index} details={teaminfo} />
             ))}
+          </SimpleGrid>
+        </Container>
+      </motion.section>
+
+      <motion.section
+        variants={variantGeneral}
+        initial="initial"
+        animate="visible"
+        viewport={{ once: true }}
+      >
+        <Container size="xl" pb={100}>
+          <Text size="md" c="brand.6" fw={600} ta="center">
+            Members
+          </Text>
+          <Text size="3rem" fw={600} ta="center">
+            Representatives
+          </Text>
+
+          <SimpleGrid cols={{ base: 2, lg: 4 }} py="xl">
+            <Box visibleFrom="lg" />
+
+            {teamrepresents.map((teaminfo: any, index: number) => (
+              <TeamCard key={index} details={teaminfo} />
+            ))}
+            <Box visibleFrom="lg" />
           </SimpleGrid>
         </Container>
       </motion.section>

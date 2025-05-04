@@ -38,36 +38,33 @@ export const beneficiaries = [
   },
   {
     name: "Sramik Dangol",
-    scholarYear: 2016,
+    scholarYear: 2017,
     details:
       "First batch SLFN scholar — four-year scholarship at Suzhou Art and Design Technology Institute, China (2020)",
     img: imgSramik.src,
   },
   {
     name: "Bikram Shrestha",
-    scholarYear: 2016,
+    scholarYear: 2017,
     details: "Fine Art College ( Lalit Kala Campus ) Nepal",
     img: imgBikram.src,
   },
   {
     name: "Shakti Raj",
     scholarYear: 2023,
-    details:
-      "Scholarship at Suzhou Art and Design Technology Institute (2023)",
+    details: "Scholarship at Suzhou Art and Design Technology Institute (2023)",
     img: imgShakti.src,
   },
   {
     name: "Sushmita Kunwar",
     scholarYear: 2023,
-    details:
-      "Scholarship at Suzhou Art and Design Technology Institute (2023)",
+    details: "Scholarship at Suzhou Art and Design Technology Institute (2023)",
     img: imgSushmita.src,
   },
   {
     name: "Saloni Limbu",
     scholarYear: 2023,
-    details:
-      "Scholarship at Suzhou Art and Design Technology Institute (2023)",
+    details: "Scholarship at Suzhou Art and Design Technology Institute (2023)",
     img: imgSaloni.src,
   },
   {
@@ -84,9 +81,9 @@ export const beneficiaries = [
   },
   {
     name: "Sandhya Ghimire",
-    scholarYear: 2017,
+    scholarYear: 2019,
     details:
-      "Earthly Paradise English Boarding School, Lamjung, Gandaki Province (2023)",
+      "Earthly Paradise English Boarding School, Lamjung, Gandaki Province (2019)",
     img: imgSandhya.src,
   },
   {
