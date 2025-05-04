@@ -18,7 +18,7 @@ const teamtop = [
   {
     name: "Ragini Upadhayay",
     position: "President, Founder",
-    position: "Former Chancellor of the Nepal Academy of Fine Arts",
+    career: "Former Chancellor of the Nepal Academy of Fine Arts",
     image: team.imgRagini.src,
   },
   {
@@ -32,7 +32,7 @@ const teamrepresents = [
   {
     name: "Mr. Jip Opdestip",
     position: "Representative - Netherlands",
-    career: "",
+    career: "Musician",
     image: team.imgJip.src,
   },
   {
@@ -69,11 +69,12 @@ const teamBoards = [
   {
     name: "Rajan Pandey",
     position: "Board Member",
-
+    career: " Teacher",
     image: team.imgRajan.src,
   },
   {
     name: "Nitika Dhungana",
+    career: "Advocate, Supreme Court",
     position: "Board Member",
     image: team.imgNikita.src,
   },
@@ -87,7 +88,7 @@ const teamBoards = [
   {
     name: "Sangita Shrestha",
     position: "Board Member",
-    career: "",
+    career: "Senior Sub-Editor, OnlineKhabar.com",
     image: team.imgSangita.src,
   },
 ];
