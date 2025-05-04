@@ -186,7 +186,7 @@ export function PageTeam() {
             <Box visibleFrom="lg" />
           </SimpleGrid>
 
-          <Container w={1000}>
+          <Container size={1000}>
             <SimpleGrid cols={{ base: 2, lg: 3 }}>
               {teams.map((teaminfo: any, index: number) => (
                 <TeamCard key={index} details={teaminfo} />
@@ -209,19 +209,28 @@ export function PageTeam() {
           <Text size="3rem" fw={600} ta="center">
             Board Members
           </Text>
-          <Container w={1000} mt="xl">
+          <Container size={1000} mt="xl" visibleFrom="lg">
             <SimpleGrid cols={{ base: 2, lg: 3 }}>
               {teamBoards.map((teaminfo: any, index: number) => (
                 <TeamCard key={index} details={teaminfo} />
               ))}
             </SimpleGrid>
           </Container>
-          <SimpleGrid cols={{ base: 2, lg: 4 }} py="xl">
+          <SimpleGrid cols={{ base: 2, lg: 4 }} py="xl" visibleFrom="lg">
             <div />
             {teamBoardsBot.map((teaminfo: any, index: number) => (
               <TeamCard key={index} details={teaminfo} />
             ))}
             <div />
+          </SimpleGrid>
+
+          <SimpleGrid cols={{ base: 2, lg: 4 }} py="xl" hiddenFrom="lg">
+            {teamBoards.map((teaminfo: any, index: number) => (
+              <TeamCard key={index} details={teaminfo} />
+            ))}
+            {teamBoardsBot.map((teaminfo: any, index: number) => (
+              <TeamCard key={index} details={teaminfo} />
+            ))}
           </SimpleGrid>
         </Container>
       </motion.section>
