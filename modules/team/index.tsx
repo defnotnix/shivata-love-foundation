@@ -209,7 +209,7 @@ export function PageTeam() {
           <Text size="3rem" fw={600} ta="center">
             Board Members
           </Text>
-          <Container w={1000}>
+          <Container w={1000} mt="xl">
             <SimpleGrid cols={{ base: 2, lg: 3 }}>
               {teamBoards.map((teaminfo: any, index: number) => (
                 <TeamCard key={index} details={teaminfo} />
