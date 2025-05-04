@@ -18,6 +18,7 @@ const teamtop = [
   {
     name: "Ragini Upadhayay",
     position: "President, Founder",
+    position: "Former Chancellor of the Nepal Academy of Fine Arts",
     image: team.imgRagini.src,
   },
   {
@@ -52,7 +53,7 @@ const teams = [
   {
     name: "Mr. Ram Pujan Thakur",
     position: "Secretary",
-    career: "Assembly Member, Nepal Academy of Fine Art",
+    career: "Former Assembly Member, Nepal Academy of Fine Art",
     image: team.imgRampujan.src,
   },
   {
