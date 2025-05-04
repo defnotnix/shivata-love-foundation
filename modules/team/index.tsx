@@ -37,7 +37,7 @@ const teams = [
   {
     name: "Mr. Jip Opdestip",
     position: "Representative - Netherlands",
-    career: "International Representative",
+    career: "Musician",
     image: team.imgJip.src,
   },
   {
