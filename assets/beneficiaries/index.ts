@@ -31,16 +31,16 @@ import imgSangita from "./sangita.jpeg";
 export const beneficiaries = [
   {
     name: "Sarita Sharma",
-    scholarYear: 2016,
+    scholarYear: 2017,
     details:
-      "Four-year scholarship at Suzhou Art and Design Technology Institute, China (2020)",
+      "Four-year scholarship at Suzhou Art and Design Technology Institute, China (2017)",
     img: imgSarita.src,
   },
   {
     name: "Sramik Dangol",
     scholarYear: 2017,
     details:
-      "First batch SLFN scholar — four-year scholarship at Suzhou Art and Design Technology Institute, China (2020)",
+      "First batch SLFN scholar — four-year scholarship at Suzhou Art and Design Technology Institute, China (2017)",
     img: imgSramik.src,
   },
   {
@@ -167,12 +167,12 @@ export const beneficiaries = [
     img: imgSalma.src,
   },
   {
-    name: "Kumari Laxmi Luhar",
+    name: "Laxmi Luhar",
     scholarYear: "2020/2021",
     img: imgKumari.src,
   },
   {
-    name: "Renna Luhar",
+    name: "Rina Luhar",
     scholarYear: "2020/2021",
     img: imgReena.src,
   },

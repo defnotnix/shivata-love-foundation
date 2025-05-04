@@ -26,6 +26,7 @@ const redBgPages = [
   "/campaigns",
   "/beneficiaries",
   "/donate",
+  "/exposure",
 ];
 
 export function LayoutSite({ children }: PropsWithChildren) {
