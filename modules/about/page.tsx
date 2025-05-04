@@ -301,9 +301,9 @@ export default function PageAbout() {
                   DEATH
                 </Text>
                 <Text size="sm" mt="sm">
-                  In 2016, Shivata tragically contracted meningitis B, a
-                  bacterial infection that proved fatal. Her passing left a deep
-                  void in the lives of those who loved her, but her legacy
+                  In 2016 February 5, Shivata tragically contracted meningitis
+                  B, a bacterial infection that proved fatal. Her passing left a
+                  deep void in the lives of those who loved her, but her legacy
                   endures through the Shivata Love Foundation Nepal (SLFN),
                   which continues her mission of helping neglected women and
                   girls. Her story is not just one of loss but of love, giving,

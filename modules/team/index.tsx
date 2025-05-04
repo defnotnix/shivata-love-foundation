@@ -91,6 +91,12 @@ const teamBoards = [
     career: "Senior Sub-Editor, OnlineKhabar.com",
     image: team.imgSangita.src,
   },
+  {
+    name: "Koshal Hamal",
+    position: "Board Member",
+    career: "Visual Artist, Art Professor",
+    image: team.imgKoshal.src,
+  },
 ];
 
 export function PageTeam() {
@@ -127,6 +133,7 @@ export function PageTeam() {
         <Paper
           radius={0}
           bg="linear-gradient(800deg, #E55454 0%, #7F2F2F 100%)"
+          pos="relative"
         >
           <Container size="xl" py={{ base: 100, lg: 160 }}>
             <Text size="6rem" fw={600} c="gray.0" visibleFrom="lg">

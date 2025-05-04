@@ -29,7 +29,31 @@ export default function PageBeneficiaries() {
           radius={0}
           bg="linear-gradient(800deg, #E55454 0%, #7F2F2F 100%)"
         >
-          <Container size="xl" pt={160} pb={{ base: 64, lg: 160 }}>
+          <Container
+            size="xl"
+            pt={160}
+            pb={{ base: 64, lg: 160 }}
+            pos="relative"
+          >
+            <div
+              style={{
+                position: "absolute",
+                right: 16,
+                bottom: 32,
+              }}
+            >
+              <Text ta="right" size="4rem" c="gray.0" fw={600} visibleFrom="lg">
+                आफ्नो सपनामा{" "}
+                <span
+                  style={{
+                    opacity: 0.2,
+                  }}
+                >
+                  In my Dreams.
+                </span>
+              </Text>
+            </div>
+
             <Text size="6rem" fw={600} c="gray.0" visibleFrom="lg">
               BENEFICIARIES
             </Text>

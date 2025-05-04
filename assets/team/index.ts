@@ -9,6 +9,7 @@ import imgShivata from "./shivata.jpg";
 import imgSangita from "./b10.jpeg";
 import imgJip from "./b99.jpeg";
 import imgKriti from "./b90.jpeg";
+import imgKoshal from "./koshal.jpeg";
 
 export const team = {
   imgAnkur,
@@ -22,4 +23,5 @@ export const team = {
   imgSangita,
   imgJip,
   imgKriti,
+  imgKoshal,
 };
