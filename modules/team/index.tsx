@@ -84,7 +84,9 @@ const teamBoards = [
     career: "Visual Artist/ Co-Founder at E-Art Nepal",
     image: team.imgErina.src,
   },
+];
 
+const teamBoardsBot = [
   {
     name: "Sangita Shrestha",
     position: "Board Member",
@@ -207,11 +209,19 @@ export function PageTeam() {
           <Text size="3rem" fw={600} ta="center">
             Board Members
           </Text>
-
+          <Container w={1000}>
+            <SimpleGrid cols={{ base: 2, lg: 3 }}>
+              {teamBoards.map((teaminfo: any, index: number) => (
+                <TeamCard key={index} details={teaminfo} />
+              ))}
+            </SimpleGrid>
+          </Container>
           <SimpleGrid cols={{ base: 2, lg: 4 }} py="xl">
-            {teamBoards.map((teaminfo: any, index: number) => (
+            <div />
+            {teamBoardsBot.map((teaminfo: any, index: number) => (
               <TeamCard key={index} details={teaminfo} />
             ))}
+            <div />
           </SimpleGrid>
         </Container>
       </motion.section>
