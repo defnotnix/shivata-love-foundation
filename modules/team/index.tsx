@@ -29,6 +29,19 @@ const teamtop = [
 
 const teams = [
   {
+    name: "Mr. Jip Opdestip",
+    position: "Representative - Netherlands",
+    career: "",
+    image: team.imgJip.src,
+  },
+  {
+    name: "Mrs. Kriti Shrestha",
+    position:
+      "Koshi Province Representative, Shivata Love Foundation Nepal (SLFN)",
+    career: "Founder/Director, Vogue Interiors Nepal",
+    image: team.imgKriti.src,
+  },
+  {
     name: "Mr. Ram Pujan Thakur",
     position: "Secretary",
     career: "Assembly Member, Nepal Academy of Fine Art",

@@ -64,6 +64,9 @@ export default function PageBeneficiaries() {
             {beneficiaries.map((beneficiary: any, index: number) => (
               <Box my="xl" key={index}>
                 <Image
+                  style={{
+                    objectPosition: "top",
+                  }}
                   h={{ base: 200, lg: 400 }}
                   radius="xl"
                   src={
@@ -72,10 +75,12 @@ export default function PageBeneficiaries() {
                   }
                 />
                 <Stack gap={4} mt="md">
-                  <Text size="md" fw={600}>
+                  <Text size="xl" fw={600}>
                     {beneficiary.name}
                   </Text>
-                  <Text size="sm">{beneficiary.scholarYear}</Text>
+                  <Text size="sm" fw={600} c="brand.6">
+                    {beneficiary.scholarYear}
+                  </Text>
                   <Text size="sm">{beneficiary.details}</Text>
                 </Stack>
               </Box>
