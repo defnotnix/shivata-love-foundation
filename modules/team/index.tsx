@@ -250,6 +250,49 @@ export function PageTeam() {
           </SimpleGrid>
         </Container>
       </motion.section>
+
+      <motion.section
+        variants={variantGeneral}
+        initial="initial"
+        animate="visible"
+        viewport={{ once: true }}
+      >
+        <Container size="xl" pb={100}>
+          <Text size="md" c="brand.6" fw={600} ta="center">
+            Members
+          </Text>
+          <Text size="3rem" fw={600} ta="center">
+            General Members
+          </Text>
+
+          <SimpleGrid spacing="xs" cols={{ base: 2, lg: 4 }} py="xl">
+            <Paper p="lg" withBorder>
+              <Text size="xs">Member</Text>
+              <Text size="md" fw={600}>
+                Sitaram Badal
+              </Text>
+            </Paper>
+            <Paper p="lg" withBorder>
+              <Text size="xs">Member</Text>
+              <Text size="md" fw={600}>
+                Ramala Neupane
+              </Text>
+            </Paper>
+            <Paper p="lg" withBorder>
+              <Text size="xs">Member</Text>
+              <Text size="md" fw={600}>
+                Samundra Man Singh
+              </Text>
+            </Paper>
+            <Paper p="lg" withBorder>
+              <Text size="xs">Member</Text>
+              <Text size="md" fw={600}>
+                Gaurav Ratna Bajracharya
+              </Text>
+            </Paper>
+          </SimpleGrid>
+        </Container>
+      </motion.section>
     </>
   );
 }
