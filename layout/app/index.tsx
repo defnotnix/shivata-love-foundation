@@ -21,13 +21,14 @@ import cx from "clsx";
 import classes from "./AppWrapper.module.css";
 import { PropsWithChildren } from "react";
 import imgLogo from "@/assets/slf.jpg";
+import Head from "next/head";
 
 export function AppWrapper({ children }: PropsWithChildren) {
   // * Color Scheme
 
   return (
     <html lang="en" suppressHydrationWarning>
-      <head>
+      <Head>
         <link rel="icon" href="./favicon.ico" sizes="any" />
         <ColorSchemeScript
           nonce="8IBTHwOdqNKAWeKl7plt8g=="
@@ -83,7 +84,7 @@ export function AppWrapper({ children }: PropsWithChildren) {
         />
         <meta name="twitter:image" content={imgLogo.src} />
         <meta property="og:image" content={imgLogo.src} />
-      </head>
+      </Head>
       <body
         style={{
           background: "#F7EDED",
