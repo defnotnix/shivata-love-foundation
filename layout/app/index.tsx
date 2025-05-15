@@ -20,6 +20,7 @@ import cx from "clsx";
 //styles
 import classes from "./AppWrapper.module.css";
 import { PropsWithChildren } from "react";
+import imgLogo from "@/assets/slf.jpg";
 
 export function AppWrapper({ children }: PropsWithChildren) {
   // * Color Scheme
@@ -38,6 +39,36 @@ export function AppWrapper({ children }: PropsWithChildren) {
           href="https://fonts.googleapis.com/css2?family=Host+Grotesk:ital,wght@0,300..800;1,300..800&family=Manrope:wght@200..800&display=swap"
           rel="stylesheet"
         />
+
+        {/* Primary Meta Tags */}
+        <meta name="title" content="Shivata Love Foundation" />
+        <meta
+          name="description"
+          content="Empowering communities through art, education, disaster relief, and cultural exchange. Join us in creating meaningful impact from Kathmandu to the world."
+        />
+        <meta
+          name="keywords"
+          content="Shivata Love Foundation, Nepal NGO, art education, disaster relief, children empowerment, scholarships Nepal, Mithila art, Bhaktapur, cultural programs"
+        />
+        <meta name="author" content="Shivata Love Foundation" />
+
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://shivata-love.org/" />
+        <meta property="og:title" content="Shivata Love Foundation" />
+        <meta
+          property="og:description"
+          content="Empowering communities through art, education, disaster relief, and cultural exchange."
+        />
+        <meta property="og:image" content={imgLogo.src} />
+
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:url" content="https://shivata-love.org/" />
+        <meta name="twitter:title" content="Shivata Love Foundation" />
+        <meta
+          name="twitter:description"
+          content="Empowering communities through art, education, disaster relief, and cultural exchange."
+        />
+        <meta name="twitter:image" content={imgLogo.src} />
       </head>
       <body
         style={{
