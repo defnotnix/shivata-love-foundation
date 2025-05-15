@@ -29,7 +29,6 @@ export function AppWrapper({ children }: PropsWithChildren) {
     <html lang="en" suppressHydrationWarning>
       <head>
         <link rel="icon" href="./favicon.ico" sizes="any" />
-
         <ColorSchemeScript
           nonce="8IBTHwOdqNKAWeKl7plt8g=="
           defaultColorScheme={"light"}
@@ -41,7 +40,6 @@ export function AppWrapper({ children }: PropsWithChildren) {
           href="https://fonts.googleapis.com/css2?family=Host+Grotesk:ital,wght@0,300..800;1,300..800&family=Manrope:wght@200..800&display=swap"
           rel="stylesheet"
         />
-
         {/* Primary Meta Tags */}
         <meta name="title" content="Shivata Love Foundation" />
         <meta
@@ -53,7 +51,6 @@ export function AppWrapper({ children }: PropsWithChildren) {
           content="Shivata Love Foundation, Nepal NGO, art education, disaster relief, children empowerment, scholarships Nepal, Mithila art, Bhaktapur, cultural programs"
         />
         <meta name="author" content="Shivata Love Foundation" />
-
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://shivata-love.org/" />
         <meta property="og:title" content="Shivata Love Foundation" />
@@ -62,16 +59,29 @@ export function AppWrapper({ children }: PropsWithChildren) {
           content="Empowering communities through art, education, disaster relief, and cultural exchange."
         />
         <meta property="og:image" content={imgLogo.src} />
-
+        \
+        <meta
+          property="og:title"
+          content="Shivata Love Foundation – Empowering Through Art, Education, and Compassion"
+        />
+        <meta
+          property="og:description"
+          content="Join us in supporting underprivileged communities through art education, scholarships, and cultural programs across Nepal."
+        />
+        <meta property="og:image" content={imgLogo.src} />
+        <meta property="og:url" content="https://shivata-love.org/" />
+        <meta property="og:type" content="website" />
+        \
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:url" content="https://shivata-love.org/" />
-        <meta name="twitter:title" content="Shivata Love Foundation" />
+        <meta
+          name="twitter:title"
+          content="Shivata Love Foundation – Empowering Through Art, Education, and Compassion"
+        />
         <meta
           name="twitter:description"
-          content="Empowering communities through art, education, disaster relief, and cultural exchange."
+          content="Join us in supporting underprivileged communities through art education, scholarships, and cultural programs across Nepal."
         />
         <meta name="twitter:image" content={imgLogo.src} />
-
         <meta property="og:image" content={imgLogo.src} />
       </head>
       <body
