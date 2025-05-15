@@ -59,7 +59,7 @@ export function AppWrapper({ children }: PropsWithChildren) {
           content="Empowering communities through art, education, disaster relief, and cultural exchange."
         />
         <meta property="og:image" content={imgLogo.src} />
-        \
+
         <meta
           property="og:title"
           content="Shivata Love Foundation – Empowering Through Art, Education, and Compassion"
@@ -71,7 +71,7 @@ export function AppWrapper({ children }: PropsWithChildren) {
         <meta property="og:image" content={imgLogo.src} />
         <meta property="og:url" content="https://shivata-love.org/" />
         <meta property="og:type" content="website" />
-        \
+
         <meta name="twitter:card" content="summary_large_image" />
         <meta
           name="twitter:title"
