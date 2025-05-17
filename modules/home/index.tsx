@@ -50,7 +50,7 @@ export default function PageHome() {
       >
         <Container size="xl">
           <Box
-            pt="xl"
+            pt={{base:50,lg:"xl"}}
             px="md"
             h="50vh"
             pos="relative"
