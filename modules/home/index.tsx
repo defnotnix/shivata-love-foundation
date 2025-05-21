@@ -52,7 +52,7 @@ export default function PageHome() {
           <Box
             pt={{base:50,lg:"xl"}}
             px="md"
-            h="50vh"
+            mih="50vh"
             pos="relative"
             style={{
               display: "flex",
@@ -108,19 +108,7 @@ export default function PageHome() {
             }}
           />
 
-          <Image
-            hiddenFrom="lg"
-            src={imgMarker.src}
-            pos="absolute"
-            h={200}
-            w={200}
-            fit="contain"
-            style={{
-              top: "10%",
-              left: "10%",
-              zIndex: -1,
-            }}
-          />
+       
         </Container>
 
         <Grid gutter={0}>
